@@ -22,7 +22,7 @@ $navbar-default-bg: black;
 }
 
 .jumbotron {
-  background-image: asset-url('cards.png');
+  background-image: asset-url('background.png');
   background-size: cover;
   height: 470px;
 }
@@ -33,6 +33,10 @@ $navbar-default-bg: black;
   margin-bottom: 30px;
   letter-spacing: -1px;
   font-weight: bold;
+}
+
+.winston-heading {
+  color: white;
 }
 
 .btn-xlarge {
