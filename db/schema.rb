@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190202235005) do
+ActiveRecord::Schema.define(version: 20190205041941) do
+
+  create_table "answers", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "question_id"
+    t.string  "answer_text"
+  end
+
+  add_index "answers", ["user_id"], name: "index_answers_on_user_id"
+
+  create_table "questions", force: :cascade do |t|
+    t.string "question_text"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "username"
