@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :questions
+  resources :answers
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -16,6 +18,8 @@ Rails.application.routes.draw do
   get 'login', to: "sessions#new"
   post 'login', to: "sessions#create"
   delete 'logout', to: "sessions#destroy"
+
+  get 'survey', to: "surveys#show"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
