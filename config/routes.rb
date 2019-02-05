@@ -19,6 +19,8 @@ Rails.application.routes.draw do
   post 'login', to: "sessions#create"
   delete 'logout', to: "sessions#destroy"
 
+  get 'survey', to: "surveys#index"
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

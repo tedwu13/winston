@@ -1,0 +1,16 @@
+<div align="center">
+  <br>
+    <% @qna.each do |questionAndAnswer| %>
+      <label><h2><%= questionAndAnswer[:question_id] %>. <%= questionAndAnswer[:question] %></h2></label>
+      </br>
+      <% unless questionAndAnswer[:answer].blank? %>
+        <textarea rows="10" cols="100" value=<% questionAndAnswer[:answer] %>></textarea>
+      <% else %>
+        <textarea rows="10" cols="100"></textarea>
+      <% end %>
+      </br>
+    <% end %>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
