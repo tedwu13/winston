@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :experts
+  resources :experts
   resources :questions, except: [:index, :destroy, :edit, :create, :update]
   resources :answers, except: [:index, :destroy, :edit, :create, :update]
   # The priority is based upon order of creation: first created -> highest priority.
