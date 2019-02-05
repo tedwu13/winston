@@ -10,7 +10,7 @@ src: url('Oswald/Oswald-Bold.ttf') format('truetype');
 src: url('Oswald/Oswald-Light.ttf') format('truetype');
 }
 
-$primary-color: #98dbc6;
+$primary-color: #009FD9;
 
 .center {
   text-align: center;
@@ -34,12 +34,13 @@ $primary-color: #98dbc6;
   font-family: 'Oswald';
   font-size: 2em;
   margin: 0.25em;
-  background-color: blue;
+  background-color: $primary-color;
 }
 
 .card {
   border: 1px solid grey;
   height: 300px;
+  font-family: 'Oswald';
 }
 
 .card-body {
