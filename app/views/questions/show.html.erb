@@ -1,0 +1,5 @@
+<p id="notice"><%= notice %></p>
+<% @questions.each do |q| %>
+  <div><%= q.id %> <%= q.question_text %></div>
+<% end %>
+</br>
