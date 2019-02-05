@@ -1,4 +1,5 @@
 <p id="notice"><%= notice %></p>
-
-<%= link_to 'Edit', edit_question_path(@question) %> |
-<%= link_to 'Back', questions_path %>
+<% @questions.each do |q| %>
+  <div><%= q.id %> <%= q.question_text %></div>
+<% end %>
+</br>
