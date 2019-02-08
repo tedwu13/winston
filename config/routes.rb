@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  resources :experts
-  resources :experts
+  resources :experts, only: [:index, :new, :create]
+
   resources :questions, except: [:index, :destroy, :edit, :create, :update]
   resources :answers, except: [:index, :destroy, :edit, :create, :update]
   # The priority is based upon order of creation: first created -> highest priority.
@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   resources :articles
 
   get 'signup', to: "users#new"
+
+  get 'experts_signup', to: "experts#new"
 
   resources :users, except: [:new]
 

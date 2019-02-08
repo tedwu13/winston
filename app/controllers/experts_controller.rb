@@ -24,6 +24,7 @@ class ExpertsController < ApplicationController
   # POST /experts
   # POST /experts.json
   def create
+    puts "expert_params", expert_params
     @expert = Expert.new(expert_params)
 
     respond_to do |format|
