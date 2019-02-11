@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  resources :questions, except: [:index, :destroy, :edit, :create, :update]
-  resources :answers, except: [:index, :destroy, :edit, :create, :update]
+  # resources :questions, except: [:index, :destroy, :edit, :create, :update]
+  # resources :answers, except: [:index, :destroy, :edit, :create, :update]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   delete 'logout', to: "sessions#destroy"
 
   get 'survey', to: "surveys#index"
+  post 'answers', to: "answers#create"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
