@@ -1,16 +1,12 @@
 <div align="center">
-  <br>
+  <%= form_tag('/answers', method: 'post') do %>
     <% @qna.each do |questionAndAnswer| %>
-      <label><h2><%= questionAndAnswer[:question_id] %>. <%= questionAndAnswer[:question] %></h2></label>
+      <h2><%= label_tag(questionAndAnswer[:question_id], questionAndAnswer[:question]) %></h2>
       </br>
-      <% unless questionAndAnswer[:answer].blank? %>
-        <textarea rows="10" cols="100" value=<% questionAndAnswer[:answer] %>></textarea>
-      <% else %>
-        <textarea rows="10" cols="100"></textarea>
-      <% end %>
+      <%= text_area_tag(questionAndAnswer[:question_id], questionAndAnswer[:answer], size: '100x10') %>
       </br>
     <% end %>
-
-    <input type="submit" value="Submit">
-  </form>
+    <%= hidden_field_tag('questions_list', @questions_list) %>
+    <%= submit_tag('Submit') %>
+  <% end %>
 </div>

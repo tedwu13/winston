@@ -1,6 +1,7 @@
 class SurveysController < ApplicationController
   DEFAULT_QUESTIONS = [1,2,3,4,5]
   def index
+    @questions_list = DEFAULT_QUESTIONS.join(",")
     @qna = []
     DEFAULT_QUESTIONS.each do |idx|
       question = Question.find(idx)
