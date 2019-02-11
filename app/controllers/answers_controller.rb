@@ -36,7 +36,6 @@ class AnswersController < ApplicationController
           Answer.create(user_id: current_user.id, question_id: q_idx, answer_text: answer)
         end
       end
-      puts answer
     end
 
     respond_to do |format|
