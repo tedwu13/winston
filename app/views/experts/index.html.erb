@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Experts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Username</th>
+      <th>Email</th>
+      <th>Password digest</th>
+      <th>Phone number</th>
+      <th>University</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @experts.each do |expert| %>
+      <tr>
+        <td><%= expert.username %></td>
+        <td><%= expert.email %></td>
+        <td><%= expert.password_digest %></td>
+        <td><%= expert.phone_number %></td>
+        <td><%= expert.university %></td>
+        <td><%= link_to 'Show', expert %></td>
+        <td><%= link_to 'Edit', edit_expert_path(expert) %></td>
+        <td><%= link_to 'Destroy', expert, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Expert', new_expert_path %>
