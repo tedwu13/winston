@@ -6,6 +6,7 @@
       <%= text_area_tag(questionAndAnswer[:question_id], questionAndAnswer[:answer], size: '100x10') %>
       </br>
     <% end %>
+    <%= hidden_field_tag('questions_list', @questions_list) %>
     <%= submit_tag('Submit') %>
-<% end %>
+  <% end %>
 </div>
