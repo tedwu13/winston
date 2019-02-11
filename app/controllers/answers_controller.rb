@@ -38,9 +38,7 @@ class AnswersController < ApplicationController
       end
     end
 
-    respond_to do |format|
-      format.html { redirect_to "/users/#{current_user.id}" }
-    end
+    head :ok, content_type: "text/html"
   end
 
   # PATCH/PUT /answers/1
