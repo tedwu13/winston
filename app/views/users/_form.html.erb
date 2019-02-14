@@ -19,6 +19,16 @@
           <%= f.email_field :email, class: "form-control", placeholder: "Enter email" %>
         </div>
       </div>
+      <% if @user.is_expert? %>
+        <div class="form-group">
+          <div class="control-label col-sm-2">
+            <%= f.label :university %>
+          </div>
+          <div class="col-sm-8">
+            <%= f.text_field :university, class: "form-control", placeholder: "Enter your college/university" %>
+          </div>
+        </div>
+      <% end %>
       <div class="form-group">
         <div class="control-label col-sm-2">
           <%= f.label :phone_number %>
@@ -41,8 +51,5 @@
         </div>
       </div>
     <% end %>
-    <div class="col-xs-4 col-xs-offset-4">
-      [ <%= link_to "Cancel request and return to articles listing", articles_path %> ]
-    </div>
   </div>
 </div>

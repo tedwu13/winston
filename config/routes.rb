@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :articles
 
   get 'signup', to: "users#new"
+  get 'experts_signup', to: "users#new"
 
   resources :users, except: [:new]
   resources :answers, only: [:create]

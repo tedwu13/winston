@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190205041941) do
+ActiveRecord::Schema.define(version: 20190214073721) do
 
   create_table "answers", force: :cascade do |t|
     t.integer "user_id"
@@ -20,6 +20,16 @@ ActiveRecord::Schema.define(version: 20190205041941) do
   end
 
   add_index "answers", ["user_id"], name: "index_answers_on_user_id"
+
+  create_table "experts", force: :cascade do |t|
+    t.string   "username"
+    t.string   "email"
+    t.string   "password_digest"
+    t.string   "phone_number"
+    t.string   "university"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
 
   create_table "questions", force: :cascade do |t|
     t.string "question_text"
@@ -33,6 +43,8 @@ ActiveRecord::Schema.define(version: 20190205041941) do
     t.string   "password_digest"
     t.boolean  "admin",           default: false
     t.string   "phone_number"
+    t.boolean  "is_expert",       default: false
+    t.string   "university"
   end
 
 end
