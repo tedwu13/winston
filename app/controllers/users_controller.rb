@@ -37,6 +37,10 @@ class UsersController < ApplicationController
   end
 
   def show
+    if current_user.nil?
+      redirect_to root_path
+      return
+    end
     user_id = params[:id]
     if user_id.to_i != current_user.id
       redirect_to user_path(current_user)
