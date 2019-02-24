@@ -1,1 +1,0 @@
-json.array! @questions, :id, :question_text
