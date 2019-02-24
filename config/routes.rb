@@ -7,12 +7,10 @@ Rails.application.routes.draw do
   root 'welcome#home'
   get 'about', to: 'welcome#about'
 
-  resources :articles
-
   get 'signup', to: "users#new"
   get 'experts_signup', to: "users#new"
 
-  resources :users, except: [:new]
+  resources :users, except: [:index, :new]
 
   get 'login', to: "sessions#new"
   post 'login', to: "sessions#create"
