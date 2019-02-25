@@ -9,10 +9,15 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
+    if request.path == experts_signup_path
+      @user.is_expert = true
+    end
+
   end
 
   def create
     @user = User.new(user_params)
+
     if @user.save
       session[:user_id] = @user.id
       flash[:success] = "Welcome to Winston #{@user.username}"
@@ -29,7 +34,6 @@ class UsersController < ApplicationController
   def update
     if @user.update(user_params)
       flash[:success] = "Your account was updated successfully"
-      redirect_to articles_path
     else
       render 'edit'
     end
@@ -46,7 +50,7 @@ class UsersController < ApplicationController
   def destroy
     @user = User.find(params[:id])
     @user.destroy
-    flash[:danger] = "User and all articles created by user have been deleted"
+    flash[:danger] = "User has been deleted"
     redirect_to users_path
   end
 
@@ -57,8 +61,13 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:username, :email, :password, :phone_number)
+    if params[:user][:is_expert].present?
+      return params.require(:user).permit(:username, :email, :password, :phone_number, :university).merge(is_expert: true)
+    else
+      return params.require(:user).permit(:username, :email, :password, :phone_number, :university).merge(is_expert: false)
+    end
   end
+
 
   def require_same_user
     if current_user != @user && !current_user.admin?
