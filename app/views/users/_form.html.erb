@@ -19,13 +19,21 @@
           <%= f.email_field :email, class: "form-control", placeholder: "Enter email" %>
         </div>
       </div>
-      <% if @user.is_expert? %>
+      <% if @user.is_expert %>
         <div class="form-group">
           <div class="control-label col-sm-2">
             <%= f.label :university %>
           </div>
           <div class="col-sm-8">
             <%= f.text_field :university, class: "form-control", placeholder: "Enter your college/university" %>
+          </div>
+        </div>
+        <div class="form-group" style="display:none;">
+          <div class="control-label col-sm-2">
+            <%= f.label :is_expert %>
+          </div>
+          <div class="col-sm-8">
+            <%= f.text_field :is_expert, class: "form-control", value: @user.is_expert %>
           </div>
         </div>
       <% end %>
