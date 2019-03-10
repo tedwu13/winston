@@ -10,7 +10,7 @@ const ready = function() {
     $.ajax({
       url: '/answers',
       type: 'post',
-      data: $('#intake-survey').serialize(),
+      data: $('#intake-survey').serialize() + '&survey_completed=false',
       success: function() {
         saveDraft.html('Saved!');
         saveDraft.prop("disabled", true);
@@ -28,7 +28,7 @@ const ready = function() {
     $.ajax({
       url: '/answers',
       type: 'post',
-      data: $('#intake-survey').serialize(),
+      data: $('#intake-survey').serialize() + '&survey_completed=true',
       success: function() {
         window.location.href = '/users/1'
       }

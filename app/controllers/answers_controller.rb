@@ -15,6 +15,12 @@ class AnswersController < ApplicationController
       end
     end
 
+    if params[:survey_completed] == 'true'
+      current_user.update(survey_completed: true)
+    else
+      current_user.update(survey_completed: false)
+    end
+
     head :ok, content_type: "text/html"
   end
 end
