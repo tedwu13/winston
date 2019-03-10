@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190214073721) do
+ActiveRecord::Schema.define(version: 20190310220326) do
 
   create_table "answers", force: :cascade do |t|
     t.integer "user_id"
@@ -31,10 +31,11 @@ ActiveRecord::Schema.define(version: 20190214073721) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "password_digest"
-    t.boolean  "admin",           default: false
+    t.boolean  "admin",            default: false
     t.string   "phone_number"
-    t.boolean  "is_expert",       default: false
+    t.boolean  "is_expert",        default: false
     t.string   "university"
+    t.boolean  "survey_completed", default: false
   end
 
 end
