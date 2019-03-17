@@ -19,6 +19,10 @@ Rails.application.routes.draw do
   get 'survey', to: "surveys#index"
   resources :answers, only: [:create]
 
+  get 'scheduler', to: "scheduler#index"
+
+  resources :availabilities, only: [:create, :destroy]
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

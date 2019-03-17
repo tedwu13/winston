@@ -1,6 +1,4 @@
 const ready = function() {
-  console.log("hello");
-
   const saveDraft = $('.draft');
   saveDraft.on('click', function(e) {
     e.preventDefault();
