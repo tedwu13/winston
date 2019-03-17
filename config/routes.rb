@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   get 'experts_signup', to: "users#new"
 
   resources :users, except: [:index, :new] do
-    resources :availabilities, only: [:index]
+    resources :availabilities, only: [:index, :create]
   end
 
   get 'login', to: "sessions#new"

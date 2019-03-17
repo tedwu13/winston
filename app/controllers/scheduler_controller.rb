@@ -1,5 +1,5 @@
 class SchedulerController < ApplicationController
-  # GET /users/1/availabilities
+  # GET /scheduler
   def index
     @daynames = Date::DAYNAMES
     @hour_intervals = [12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
@@ -29,6 +29,7 @@ class SchedulerController < ApplicationController
         22 => '10:00 PM',
         23 => '11:00 PM',
     }
+    @availabilities = Set['0-0', '1-2', '5-9', '6-23']
     render 'index'
   end
 end

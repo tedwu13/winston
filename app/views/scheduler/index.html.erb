@@ -18,9 +18,15 @@
         <tr>
           <% 7.times do |day| %>
             <td>
-              <button type="button" class="btn btn-default scheduler-btn" id=<%= day %>-<%= hour %>>
-                <%= @hour_to_time_map[hour] %>
-              </button>
+              <% if @availabilities.include? "#{day}-#{hour}" %>
+                <button type="button" class="btn btn-success scheduler-btn" id=<%= day %>-<%= hour %>>
+                  <%= @hour_to_time_map[hour] %>
+                </button>
+              <% else %>
+                <button type="button" class="btn btn-default scheduler-btn" id=<%= day %>-<%= hour %>>
+                  <%= @hour_to_time_map[hour] %>
+                </button>
+              <% end %>
             </td>
           <% end %>
         </tr>

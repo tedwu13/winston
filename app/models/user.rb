@@ -11,6 +11,8 @@ class User < ActiveRecord::Base
   validates :phone_number, presence: true
   has_secure_password
 
+  has_many :availabilities
+
   def is_expert?
     self.is_expert
   end
