@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190310224446) do
+ActiveRecord::Schema.define(version: 20190317031402) do
 
   create_table "answers", force: :cascade do |t|
     t.integer "user_id"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20190310224446) do
     t.datetime "available_at"
   end
 
+  add_index "availabilities", ["user_id", "available_at"], name: "index_availabilities_on_user_id_and_available_at", unique: true
   add_index "availabilities", ["user_id"], name: "index_availabilities_on_user_id"
 
   create_table "questions", force: :cascade do |t|
