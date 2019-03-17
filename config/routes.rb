@@ -10,9 +10,7 @@ Rails.application.routes.draw do
   get 'signup', to: "users#new"
   get 'experts_signup', to: "users#new"
 
-  resources :users, except: [:index, :new] do
-    resources :availabilities, only: [:index, :create]
-  end
+  resources :users, except: [:index, :new]
 
   get 'login', to: "sessions#new"
   post 'login', to: "sessions#create"
@@ -22,6 +20,8 @@ Rails.application.routes.draw do
   resources :answers, only: [:create]
 
   get 'scheduler', to: "scheduler#index"
+
+  resources :availabilities, only: [:create]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -1,39 +1,12 @@
-const ready = function() {
-
-  const saveDraft = $('.draft');
-  saveDraft.on('click', function(e) {
-    e.preventDefault();
-    saveDraft.html('Saving...');
-    saveDraft.prop("disabled", true);
-
+$(document).ready(function() {
+  $('.scheduler-btn').click(function(e) {
+    $(this).toggleClass('btn-default btn-success');
     $.ajax({
-      url: '/answers',
+      url: '/availabilities',
       type: 'post',
-      data: $('#intake-survey').serialize() + '&survey_completed=false',
-      success: function() {
-        saveDraft.html('Saved!');
-        saveDraft.prop("disabled", true);
-
-        setTimeout(function() {
-          saveDraft.html('Save Draft');
-          saveDraft.prop("disabled", false);
-        }, 500);
-      }
+      data: {
+        new_availability: e.target.id
+      },
     });
   });
-
-  const submit = $('.submit');
-  submit.on('click', function(e) {
-    $.ajax({
-      url: '/answers',
-      type: 'post',
-      data: $('#intake-survey').serialize() + '&survey_completed=true',
-      success: function() {
-        window.location.href = '/users/1'
-      }
-    });
-  });
-};
-
-$(document).ready(ready);
-document.addEventListener("turbolinks:load", ready);
+});

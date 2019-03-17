@@ -29,7 +29,13 @@ class SchedulerController < ApplicationController
         22 => '10:00 PM',
         23 => '11:00 PM',
     }
-    @availabilities = Set['0-0', '1-2', '5-9', '6-23']
+    mappedAvailabilities = current_user.availabilities.map do |availability|
+      availability_day = availability.available_at.utc.wday
+      availability_hour = availability.available_at.utc.hour
+      "#{availability_day}-#{availability_hour}"
+    end
+
+    @availabilities = mappedAvailabilities.to_set
     render 'index'
   end
 end
