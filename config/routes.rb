@@ -10,7 +10,9 @@ Rails.application.routes.draw do
   get 'signup', to: "users#new"
   get 'experts_signup', to: "users#new"
 
-  resources :users, except: [:index, :new]
+  resources :users, except: [:index, :new] do
+    resources :availabilities, only: [:index]
+  end
 
   get 'login', to: "sessions#new"
   post 'login', to: "sessions#create"
