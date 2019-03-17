@@ -18,7 +18,7 @@
         <tr>
           <% 7.times do |day| %>
             <td>
-              <button type="button" class="btn btn-default scheduler-btn" day=<% day %> hour=<% hour %>>
+              <button type="button" class="btn btn-default scheduler-btn" id=<%= day %>-<%= hour %>>
                 <%= @hour_to_time_map[hour] %>
               </button>
             </td>

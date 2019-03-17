@@ -1,4 +1,4 @@
-class AvailabilitiesController < ApplicationController
+class SchedulerController < ApplicationController
   # GET /users/1/availabilities
   def index
     @daynames = Date::DAYNAMES
