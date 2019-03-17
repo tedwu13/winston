@@ -36,6 +36,9 @@ gem 'mysql2'
 # Use puma as the app server
 gem 'puma'
 
+# Use stripe gem
+gem 'stripe'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
