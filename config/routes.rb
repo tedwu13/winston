@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   get 'scheduler', to: "scheduler#index"
 
   resources :availabilities, only: [:create, :destroy]
-  resources :meetings, only: [:index, :create]
+  resources :charges, only: [:new, :create]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
