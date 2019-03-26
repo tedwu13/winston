@@ -5,8 +5,8 @@ class ChargesController < ApplicationController
   end
 
   def create
-    # Amount is in cents so always times 100 for dollars
-    @amount = CHARGE_AMOUNT_IN_DOLLARS * 100 # 10,000 cents is 100 dollars
+    # Amount is in cents so always times 100 to convert to dollar amount
+    @amount = CHARGE_AMOUNT_IN_DOLLARS * 100
 
     # Create the customer in Stripe
     customer = Stripe::Customer.create(
