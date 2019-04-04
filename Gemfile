@@ -33,6 +33,9 @@ gem 'bootstrap-will_paginate', '0.0.10'
 # use mysql
 gem 'mysql2'
 
+# stripe gem
+gem 'stripe'
+
 # Use puma as the app server
 gem 'puma'
 

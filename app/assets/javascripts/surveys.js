@@ -28,7 +28,7 @@ const ready = function() {
       type: 'post',
       data: $('#intake-survey').serialize() + '&survey_completed=true',
       success: function() {
-        window.location.href = '/users/1'
+        window.location.href = '/scheduler'
       }
     });
   });
