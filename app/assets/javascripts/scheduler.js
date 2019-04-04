@@ -1,4 +1,4 @@
-$(document).ready(function() {
+const schedulerReady = function() {
   $('.scheduler-btn').click(function(e) {
     let method;
     if ($(event.target).attr('class').includes('btn-default')) {
@@ -20,4 +20,5 @@ $(document).ready(function() {
     }
     $(this).toggleClass('btn-default btn-success');
   });
-});
+};
+document.addEventListener("turbolinks:load", schedulerReady);
