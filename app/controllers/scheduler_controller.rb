@@ -30,8 +30,11 @@ class SchedulerController < ApplicationController
         23 => '11:00 PM',
     }
     mappedAvailabilities = current_user.availabilities.map do |availability|
-      availability_day = availability.available_at.utc.wday
-      availability_hour = availability.available_at.utc.hour
+      zone = ActiveSupport::TimeZone.new(current_user.time_zone)
+      availability = availability.available_at.in_time_zone(zone)
+
+      availability_day = availability.wday
+      availability_hour = availability.hour
       "#{availability_day}-#{availability_hour}"
     end
 
