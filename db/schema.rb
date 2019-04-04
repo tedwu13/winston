@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190317031402) do
+ActiveRecord::Schema.define(version: 20190404024848) do
 
   create_table "answers", force: :cascade do |t|
     t.integer "user_id"
@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 20190317031402) do
     t.boolean  "is_expert",        default: false
     t.string   "university"
     t.boolean  "survey_completed", default: false
+    t.string   "time_zone"
   end
 
 end
