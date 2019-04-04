@@ -63,9 +63,9 @@ class UsersController < ApplicationController
 
   def user_params
     if params[:user][:is_expert].present?
-      return params.require(:user).permit(:username, :email, :password, :phone_number, :university).merge(is_expert: true)
+      return params.require(:user).permit(:username, :email, :password, :phone_number, :university, :time_zone).merge(is_expert: true)
     else
-      return params.require(:user).permit(:username, :email, :password, :phone_number, :university).merge(is_expert: false)
+      return params.require(:user).permit(:username, :email, :password, :phone_number, :university, :time_zone).merge(is_expert: false)
     end
   end
 

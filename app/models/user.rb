@@ -9,6 +9,8 @@ class User < ActiveRecord::Base
             uniqueness: { case_sensitive: false },
             format: { with: VALID_EMAIL_REGEX }
   validates :phone_number, presence: true
+  validates :time_zone, presence: true
+
   has_secure_password
 
   has_many :availabilities
