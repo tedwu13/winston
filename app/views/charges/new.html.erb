@@ -1,18 +1,21 @@
-<%= form_tag charges_path do %>
-  <article>
-    <% if flash[:error].present? %>
-      <div id="error_explanation">
-        <p><%= flash[:error] %></p>
-      </div>
-    <% end %>
-    <p>Before you schedule, we will set up payments and will only charge you
-      <%= label_tag 'amount', "$#{@amount}.00", class: 'amount-figure' %> for call with an expert after the call is finished</p>
-  </article>
+<div class="charges">
+  <%= form_tag charges_path do %>
+    <article>
+      <% if flash[:error].present? %>
+        <div id="error_explanation">
+          <p><%= flash[:error] %></p>
+        </div>
+      <% end %>
+      <p>Input payment information and will only charge you
+        <%= label_tag 'amount', "$#{@amount}.00" %>
+        for the call with an expert after the call is finished</p>
+    </article>
 
-  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-          data-amount="#{@amount}"
-          data-name="Payment for Winston"
-          data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
-          data-locale="auto"></script>
-<% end %>
+    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+            data-amount="#{@amount}"
+            data-name="Winston"
+            data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+            data-locale="auto"></script>
+  <% end %>
+</div>

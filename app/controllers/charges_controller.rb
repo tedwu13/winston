@@ -1,12 +1,12 @@
 class ChargesController < ApplicationController
   CHARGE_AMOUNT_IN_DOLLARS = 100
+
   def new
     @amount = CHARGE_AMOUNT_IN_DOLLARS
   end
 
   def create
-    # Amount is in cents so always times 100 to convert to dollar amount
-    @amount = CHARGE_AMOUNT_IN_DOLLARS * 100
+    @amount = CHARGE_AMOUNT_IN_DOLLARS
 
     # Create the customer in Stripe
     customer = Stripe::Customer.create(
@@ -17,8 +17,8 @@ class ChargesController < ApplicationController
     # Create the charge using the customer data returned by Stripe API
     charge = Stripe::Charge.create(
       customer: customer.id,
-      amount: @amount,
-      description: 'rails stripe customer returned by Stripe API',
+      amount: @amount * 100, # Stripe amount unit is in cents so times 100 to convert to dollar amount
+      description: 'Rails Stripe Customer returned by Stripe API',
       currency: 'usd'
     )
 
