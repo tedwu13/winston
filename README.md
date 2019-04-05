@@ -8,4 +8,7 @@ Winston is an educational concierge platform to connect students to valuable res
   - ```rbenv init```
   - ```rbenv install 2.3.6```
 - Install ruby on rails ```4.2.5```
-
+- Install bundler ```gem install bundler```
+- Install all gems in Gemfile ```bundle install```
+- Run migration file and get all the seed data ```bundle exec rake db:migrate```
+- Run rails server ```rails server```
