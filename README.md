@@ -12,3 +12,5 @@ Winston is an educational concierge platform to connect students to valuable res
 - Install all gems in Gemfile ```bundle install```
 - Run migration file and get all the seed data ```bundle exec rake db:migrate```
 - Run rails server ```rails server```
+- Once rails server is running, you can go to http://localhost:3000
+
