@@ -4,6 +4,8 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 
+# Rails 4.2.5 requires bundler version to be < 2.0 and >= 1.30
+# Going to use 1.9.10 as the latest version that won't break rails 4.2.5
 gem 'bundler', '1.9.10'
 
 # Use SCSS for stylesheets
@@ -57,7 +59,7 @@ group :development do
 end
 
 group :production do
-  # gem 'sqlite3'
+  gem 'sqlite3'
   gem 'rails_12factor'
 end
 
