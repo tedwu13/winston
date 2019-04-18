@@ -34,8 +34,9 @@ gem 'bootstrap-will_paginate', '0.0.10'
 # stripe gem
 gem 'stripe'
 
-# Use puma as the app server
-gem 'puma'
+# Use passenger as app server instead of puma
+gem "passenger", ">= 5.0.25", require: "phusion_passenger/rack_handler"
+
 
 group :development, :test do
   gem 'sqlite3'
@@ -49,13 +50,6 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-
-  # capistrano magic
-  gem 'capistrano',         require: false
-  gem 'capistrano-rvm',     require: false
-  gem 'capistrano-rails',   require: false
-  gem 'capistrano-bundler', require: false
-  gem 'capistrano3-puma',   require: false
 end
 
 group :production do
