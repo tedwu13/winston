@@ -37,11 +37,11 @@ gem 'stripe'
 # Use passenger as app server instead of puma
 gem "passenger", ">= 5.0.25", require: "phusion_passenger/rack_handler"
 
+# use sqlite3 for production as well
+gem "sqlite3"
 
 group :development, :test do
-  gem 'sqlite3'
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
+  gem 'byebug' # Call 'byebug' anywhere in the code to stop execution and get a debugger console
 end
 
 group :development do
