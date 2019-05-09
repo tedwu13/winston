@@ -9,15 +9,20 @@ src: url('Oswald/Oswald-Light.ttf') format('truetype');
 }
 
 $primary-color: #419f74;
-$white-color: #f7f7f7;
+$light-gray: #f7f7f7;
+$gray: #7f7f7f;
+$purple: #5d3fb7;
+$dark: #333333;
+
 
 .center {
   text-align: center;
 }
 
 .jumbotron-section {
-  color: $white-color;
+  color: $light-gray;
 }
+
 .jumbotron {
   background-image: asset-url('background-flipped.jpg');
   background-size: cover;
@@ -25,23 +30,28 @@ $white-color: #f7f7f7;
 }
 
 #sign_up_header {
-  color: $white-color;
+  color: $light-gray;
   font-weight: bold;
   font-size: 2.5em;
   margin-bottom: 0.5em;
 }
 
 .outside-btn {
-  color: $white-color;
+  color: $light-gray;
   font-size: 2em;
   margin: 0.25em;
   background-color: $primary-color;
 }
 
-.card-img-background {
-  background-image: asset-url('experts.jpg');
-  background-size: cover;
-  color: white;
+.what-we-do-container {
+  float: left;
+  text-align: left;
+  width: 48%;
+  height: 120px;
+  margin-left: 2%;
+  margin-top: 2%;
+  background-color: $light-gray;
+  padding-left: 2%;
 }
 
 footer {
