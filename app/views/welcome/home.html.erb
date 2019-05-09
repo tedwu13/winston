@@ -1,26 +1,38 @@
-<div class="center">
-  <h1 id="sign_up_header">Sign up on Winston</h1>
+<div class="jumbotron">
+
+<!-- Navigation -->
+<nav class="navbar">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <%= link_to "Winston", root_path, class: "navbar-brand", id: "logo" %>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <% if logged_in? %>
+          <li><%= link_to "Edit your profile", edit_user_path(current_user) %></li>
+          <li><%= link_to "Log out", logout_path, method: :delete %></li>
+        <% else %>
+          <li><%= link_to "Log in", login_path %></li>
+          <li><%= link_to "Sign up", signup_path %></li>
+        <% end %>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
   <div class="row">
     <div class="col-sm-1"></div>
-    <div class="col-sm-5">
-      <div class="card sign-up-card">
-        <div class="card-body">
-          <h5 class="card-title">I want to be introduced to college students or alumnis</h5>
-          <p class="card-text">Get introduced to the right experts to answer your questions about specific universities</p>
-          <%= link_to "Sign Up as a Student", signup_path, class: "btn btn-lg btn-primary outside-btn" %>
-        </div>
-      </div>
+    <div class="col-sm-8">
+      <h2 id="sign_up_header">Introducing Winston, your personal <br>
+    educational concierge</h2>
     </div>
-    <div class="col-sm-5">
-      <div class="card sign-up-card card-img-background">
-        <div class="card-body">
-          <h5 class="card-title">I want to mentor high school students</h5>
-          <p class="card-text">Respond to high school students requests based on each student's needs and hop on a call.</p>
-          <%= link_to "Join as an Expert", experts_signup_path, class: "btn btn-lg btn-primary outside-btn" %>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-1"></div>
+    <div class="col-sm-3"></div>
+  </div>
+  <div class="row">
+
   </div>
 </div>
 
