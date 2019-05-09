@@ -13,13 +13,15 @@ $white-color: #f7f7f7;
 
 .center {
   text-align: center;
-  font-family: 'Oswald';
 }
 
+.jumbotron-section {
+  color: $white-color;
+}
 .jumbotron {
-  background-image: asset-url('background.png');
+  background-image: asset-url('background-flipped.jpg');
   background-size: cover;
-  height: 650px;
+  height: 800px;
 }
 
 #sign_up_header {
@@ -30,7 +32,7 @@ $white-color: #f7f7f7;
 }
 
 .outside-btn {
-  font-family: 'Oswald';
+  color: $white-color;
   font-size: 2em;
   margin: 0.25em;
   background-color: $primary-color;
