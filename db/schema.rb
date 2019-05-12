@@ -29,16 +29,6 @@ ActiveRecord::Schema.define(version: 20190419233053) do
   add_index "availabilities", ["user_id", "available_at"], name: "index_availabilities_on_user_id_and_available_at", unique: true
   add_index "availabilities", ["user_id"], name: "index_availabilities_on_user_id"
 
-  create_table "experts", force: :cascade do |t|
-    t.string   "username"
-    t.string   "email"
-    t.string   "password_digest"
-    t.string   "phone_number"
-    t.string   "university"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-  end
-
   create_table "questions", force: :cascade do |t|
     t.string "question_text"
   end

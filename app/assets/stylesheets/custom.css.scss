@@ -25,11 +25,9 @@ $dark: #333333;
 
 .jumbotron {
   position: relative;
-  width: 100%;
-  height: 100%;
   background-image: asset-url('background-flipped.jpg');
   background-size: cover;
-  height: 700px;
+  min-height: 95vh;
 
   &:before {
     content: '';
