@@ -15,8 +15,22 @@ $gray: #7f7f7f;
 $purple: #5d3fb7;
 $dark: #333333;
 
+
 .green {
   color: $primary-color;
+}
+
+.light-icon-color {
+  color: $light-gray;
+}
+
+.gray-background {
+  background-color: $light-gray;
+}
+
+.subheaders {
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
 .center {
@@ -73,14 +87,12 @@ $dark: #333333;
 }
 
 .how-it-works {
-  background-color: $light-gray;
+  padding-bottom: 2em;
+  margin-top: 2em;
 }
 
-.how-it-works-subheaders {
-  margin-top: 1em;
-  margin-bottom: 1em;
-  padding-top: 1em;
-  padding-bottom: 1em;
+.icon-background {
+  color: $primary-color;
 }
 
 footer {
@@ -106,13 +118,6 @@ footer ul {
 footer ul li {
   float: left;
   margin-left: 15px;
-}
-
-.badge {
-  background-color: #CEF6F5;
-  text-transform: uppercase;
-  letter-spacing: -1px;
-  font-weight: bold;
 }
 
 .input_checkbox input {
