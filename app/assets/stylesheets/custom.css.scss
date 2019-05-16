@@ -2,10 +2,10 @@
 @import "bootstrap-sprockets";
 
 @font-face {
-font-family: 'Roboto';
-src: url('Roboto/Roboto-Regular.ttf') format('truetype');
-src: url('Roboto/Roboto-Bold.ttf') format('truetype');
-src: url('Roboto/Roboto-Light.ttf') format('truetype');
+  font-family: 'Roboto';
+  src: url('Roboto/Roboto-Regular.ttf') format('truetype');
+  src: url('Roboto/Roboto-Bold.ttf') format('truetype');
+  src: url('Roboto/Roboto-Light.ttf') format('truetype');
 }
 
 $primary-color: #419f74;
@@ -14,8 +14,8 @@ $gray: #7f7f7f;
 $purple: #5d3fb7;
 $dark: #333333;
 
-
-.green {
+// green color
+.primary-color {
   color: $primary-color;
 }
 
@@ -41,8 +41,17 @@ $dark: #333333;
 }
 
 .jumbotron-section {
-  color: $light-gray;
+  color: white;
+  font-family: 'Roboto Slab', serif;
 }
+
+.jumbotron-text {
+ font-family: 'Roboto Slab', serif;
+ padding-top: 1em;
+ padding-bottom: 1em;
+ font-size: 1.2em;
+}
+
 
 .jumbotron {
   position: relative;
