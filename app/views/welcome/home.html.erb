@@ -1,29 +1,28 @@
 <div class="jumbotron overlay">
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container-fluid">
+      <!-- As a heading -->
+      <nav class="navbar-header navbar-light bg-light">
+        <span class="navbar-brand h4 white">
+          <i class="fa fa-graduation-cap light-icon-color"></i> Winston
+        </span>
+      </nav>
 
-<!-- Navigation -->
-<nav class="navbar">
-  <div class="container-fluid">
-    <!-- As a heading -->
-    <nav class="navbar-header navbar-light bg-light">
-      <span class="navbar-brand h4 white">
-        <i class="fa fa-graduation-cap light-icon-color"></i> Winston
-      </span>
-    </nav>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
-        <% if logged_in? %>
-          <li><%= link_to "Edit your profile", edit_user_path(current_user) %></li>
-          <li><%= link_to "Log out", logout_path, method: :delete %></li>
-        <% else %>
-          <li><%= link_to "Log in", login_path %></li>
-          <li><%= link_to "Sign up", signup_path %></li>
-        <% end %>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <% if logged_in? %>
+            <li><%= link_to "Edit your profile", edit_user_path(current_user) %></li>
+            <li><%= link_to "Log out", logout_path, method: :delete %></li>
+          <% else %>
+            <li><%= link_to "Log in", login_path %></li>
+            <li><%= link_to "Sign up", signup_path %></li>
+          <% end %>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
 
   <div class="row jumbotron-section">
     <div class="col-sm-1"></div>
@@ -242,11 +241,13 @@
     <p>Whether you're looking for some quick advice on 1-on-1 counseling relationship, Winston has many options to meet your needs</p>
     <p>Sign up now to receive a customized quote or contact us to learn more</p>
     <%= link_to "SIGN UP NOW", signup_path, class: "btn btn-small btn-primary outside-btn" %>
-  <!-- <img src=""> large woman image-->
+    <div class="text-center">
+      <img src="../../assets/flexible-offerings-woman" class="rounded" alt="...">
+    </div>
   </div>
 </div>
 
-<div class="get-started-today">
+<div class="get-started-today gray-background">
   <div class="subheaders center">
     <h3 class="section-titles">Get started today</h3>
     <p>Let Winston help you create a better, brighter future</p>
