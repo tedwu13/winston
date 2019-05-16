@@ -1,6 +1,5 @@
 @import "bootstrap";
 @import "bootstrap-sprockets";
-@import "font-awesome";
 
 @font-face {
 font-family: 'Roboto';
@@ -18,6 +17,10 @@ $dark: #333333;
 
 .green {
   color: $primary-color;
+}
+
+.white {
+  color: white;
 }
 
 .light-icon-color {
@@ -70,7 +73,7 @@ $dark: #333333;
 
 .outside-btn {
   color: $light-gray;
-  font-size: 2em;
+  font-size: 1.0em;
   margin: 0.25em;
   background-color: $primary-color;
 }

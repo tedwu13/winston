@@ -3,10 +3,12 @@
 <!-- Navigation -->
 <nav class="navbar">
   <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <%= link_to "Winston", root_path, class: "navbar-brand", id: "logo" %>
-    </div>
+    <!-- As a heading -->
+    <nav class="navbar-header navbar-light bg-light">
+      <span class="navbar-brand h4 white">
+        <i class="fa fa-graduation-cap light-icon-color"></i> Winston
+      </span>
+    </nav>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -187,9 +189,12 @@
 
 
 <div class="flexible-offerings">
-  <p>Whether you're looking for some quick advice on 1-on-1 counseling relationship, Winston has many options to meet your needs</p>
-  <p>Sign up now to receive a customized quote or contact us to learn more</p>
-  <%= link_to "SIGN UP NOW", signup_path, class: "btn btn-small btn-primary outside-btn" %>
+  <div class="subheaders center">
+    <h3>Flexible Offerings</h3>
+    <p>Whether you're looking for some quick advice on 1-on-1 counseling relationship, Winston has many options to meet your needs</p>
+    <p>Sign up now to receive a customized quote or contact us to learn more</p>
+    <%= link_to "SIGN UP NOW", signup_path, class: "btn btn-small btn-primary outside-btn" %>
+  <dir></dir>
   <!-- <img src=""> large woman image-->
 </div>
 
