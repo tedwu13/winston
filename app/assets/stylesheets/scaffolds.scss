@@ -6,11 +6,7 @@ src: url('Roboto/Roboto-Light.ttf') format('truetype');
 }
 
 body {
-  background-color: #fff;
-  color: #333;
-  font-family: 'Roboto';
-  font-size: 13px;
-  line-height: 18px;
+  overflow-x: hidden;
 }
 
 p, ol, ul, td {
