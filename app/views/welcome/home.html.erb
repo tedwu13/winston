@@ -42,7 +42,7 @@
 
 <div class="what-we-do-section">
   <div class="center">
-    <h3><b>What We Do</b></h3>
+    <h3 class="section-titles">What We Do</h3>
     <p>Whether you're looking for help with applications, deciding between universities, or figuring out where to live</p>
     <p>and what classes to take, Winston was created for you.</p>
   </div>
@@ -89,7 +89,7 @@
 
 <div class="how-it-works gray-background">
   <div class="subheaders center">
-    <h3>How it works</h3>
+    <h3 class="section-titles">How it works</h3>
     <p>Get connected with an expert in three quick, easy steps, no matter where you are</p>
   </div>
 
@@ -134,7 +134,7 @@
 
 <div class="what-students-are-saying">
   <div class="subheaders center">
-    <h3>What students are saying</h3>
+    <h3 class="section-titles">What students are saying</h3>
       <p>See how Winston can help</p>
   </div>
 
@@ -147,9 +147,14 @@
         have made it into Stanford without my advisor's help. They made the progress
         so easy and simple."
       </p>
-      <!-- <img src=""> -->
-      <p>Choodry C</p>
-      <p>Student, Delhi</p>
+      <div class="student-information">
+        <span class="fa-stack fa-2x">
+          <i class="fa fa-circle fa-stack-2x light-icon-color"></i>
+          <i class="fa fa-quote-right fa-stack-1x icon-background"></i>
+        </span>
+        <p>Ted Wang</p>
+        <p>Student, Taiwan</p>
+      </div>
     </div>
 
     <div class="student-testimonial col-sm-4">
@@ -158,9 +163,14 @@
         have made it into Stanford without my advisor's help. They made the progress
         so easy and simple."
       </p>
-      <!-- <img src=""> -->
-      <p>Choodry C</p>
-      <p>Student, Delhi</p>
+      <div class="student-information">
+        <span class="fa-stack fa-2x">
+          <i class="fa fa-circle fa-stack-2x light-icon-color"></i>
+          <i class="fa fa-quote-right fa-stack-1x icon-background"></i>
+        </span>
+        <p>Choodry C</p>
+        <p>Student, Delhi</p>
+      </div>
     </div>
 
     <div class="student-testimonial col-sm-4">
@@ -169,19 +179,25 @@
         have made it into Stanford without my advisor's help. They made the progress
         so easy and simple."
       </p>
-      <!-- <img src=""> -->
-      <p>Choodry C</p>
-      <p>Student, Delhi</p>
+      <div class="student-information">
+        <span class="fa-stack fa-2x">
+          <i class="fa fa-circle fa-stack-2x light-icon-color"></i>
+          <i class="fa fa-quote-right fa-stack-1x icon-background"></i>
+        </span>
+        <p>Sida Hsu</p>
+        <p>Student, California</p>
+      </div>
     </div>
     </div>
     <div class="col-sm-1"></div>
   </div>
 
+  <br><br><br><br>
 </div>
 
 <div class="meet-our-team gray-background">
   <div class="subheaders center">
-    <h3>Meet our team</h3>
+    <h3 class="section-titles">Meet our team</h3>
     <p>Winston's advisors come from a wide variety of backgrounds and experiences, <br>
     and we are constantly working to find the best expert to meet your needs</p>
   </div>
@@ -190,15 +206,18 @@
 
 <div class="flexible-offerings">
   <div class="subheaders center">
-    <h3>Flexible Offerings</h3>
+    <h3 class="section-titles">Flexible Offerings</h3>
     <p>Whether you're looking for some quick advice on 1-on-1 counseling relationship, Winston has many options to meet your needs</p>
     <p>Sign up now to receive a customized quote or contact us to learn more</p>
     <%= link_to "SIGN UP NOW", signup_path, class: "btn btn-small btn-primary outside-btn" %>
-  <dir></dir>
   <!-- <img src=""> large woman image-->
+  </div>
 </div>
 
 <div class="get-started-today">
-  <p>Let Winston help you create a better, brighter future</p>
-  <%= link_to "SCHEDULE YOUR FIRST CALL", signup_path, class: "btn btn-lg btn-primary outside-btn" %>
+  <div class="subheaders center">
+    <h3 class="section-titles">Get started today</h3>
+    <p>Let Winston help you create a better, brighter future</p>
+    <%= link_to "SCHEDULE YOUR FIRST CALL", signup_path, class: "btn btn-lg btn-primary outside-btn" %>
+  </div>
 </div>

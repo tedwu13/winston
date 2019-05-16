@@ -31,9 +31,13 @@ $dark: #333333;
   background-color: $light-gray;
 }
 
+.section-titles {
+  font-weight: bolder;
+}
+
 .subheaders {
-  padding-top: 1em;
-  padding-bottom: 1em;
+  padding-top: 2em;
+  padding-bottom: 2em;
 }
 
 .center {
@@ -105,6 +109,10 @@ $dark: #333333;
 
 .icon-background {
   color: $primary-color;
+}
+
+.student-information {
+  text-align: center;
 }
 
 footer {
