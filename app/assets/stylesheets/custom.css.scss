@@ -16,7 +16,7 @@
 
 
 $ivy-green: #468266;
-$light-gray: #f7f7f7;
+$light-gray: #f9f9fb;
 $gray: #7f7f7f;
 $marine-blue: #03426f;
 
@@ -28,20 +28,49 @@ $marine-blue: #03426f;
   color: white;
 }
 
-.light-icon-color {
-  color: $light-gray;
-}
-
-.section-titles {
-  font-weight: bolder;
-}
-
-.subheaders {
-  padding-top: 2em;
-  padding-bottom: 2em;
+.marine-blue {
+  color: $marine-blue;
 }
 
 .center {
+  text-align: center;
+}
+
+h3 {
+  font-family: PlayfairDisplay;
+  font-size: 48px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.8px;
+  text-align: center;
+}
+
+h4 {
+  font-family: 'OpenSans';
+  font-size: 22px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.section-text {
+  font-family: 'OpenSans';
+  font-size: 22px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5;
+  letter-spacing: -0.1px;
+  text-align: center;
+}
+
+.subheaders {
+  padding-top: 3em;
+  padding-bottom: 3em;
   text-align: center;
 }
 
@@ -115,20 +144,38 @@ $marine-blue: #03426f;
   padding-bottom: 1em;
 }
 
-.what-we-do-container {
+.how-it-works {
+  padding-bottom: 5em;
+  background-image: linear-gradient(291deg, $marine-blue, #458166, $ivy-green);
+}
+
+.how-it-works-step {
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+}
+
+.what-we-do-section {
+  padding-bottom: 3em;
+}
+
+.what-we-do-subsection {
   float: left;
   text-align: left;
-  width: 48%;
-  height: 120px;
+  width: 588px;
+  height: 166px;
   margin-left: 2%;
   margin-top: 2%;
   background-color: $light-gray;
   padding-left: 2%;
+  border-radius: 12px;
+  box-shadow: 0 1px 8px 0 rgba(51, 51, 51, 0.2);
+  background-color: white;
 }
 
-.how-it-works {
-  padding-bottom: 2em;
-  background-image: linear-gradient(291deg, $marine-blue, #458166, $ivy-green);
+.meet-our-team {
+  padding-bottom: 3em;
+  background-color: $light-gray;
 }
 
 .student-information {
