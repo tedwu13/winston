@@ -68,9 +68,11 @@
         <% end %>
 
         <div class="form-group">
-          <div class="col-sm-6 col-sm-offset-3">
-            <div>By clicking <%= @user.is_expert ? 'Join Us' : 'Sign Up' %>, I agree to the Terms of Use and Privacy Policy.</div>
-            <br/>
+          <div class="col-sm-4 col-sm-offset-4">
+            <% if @user.new_record? %>
+              <div>By clicking <%= @user.is_expert ? 'Join Us' : 'Sign Up' %>, I agree to the Terms of Use and Privacy Policy.</div>
+              <br/>
+            <% end %>
             <%= f.submit(if @user.new_record?
                            @user.is_expert ? 'Join Us' : 'Sign Up'
                          else
@@ -79,7 +81,9 @@
           </div>
         </div>
 
-        <div align="center">Already have an account? <a href="/login">Log in</a>.</div>
+        <% if @user.new_record? %>
+          <div align="center">Already have an account? <a href="/login">Log in</a>.</div>
+        <% end %>
     <% end %>
     </div>
   </div>
