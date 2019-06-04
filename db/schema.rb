@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190419233053) do
+ActiveRecord::Schema.define(version: 20190604070115) do
 
   create_table "answers", force: :cascade do |t|
     t.integer "user_id"
@@ -29,16 +29,6 @@ ActiveRecord::Schema.define(version: 20190419233053) do
   add_index "availabilities", ["user_id", "available_at"], name: "index_availabilities_on_user_id_and_available_at", unique: true
   add_index "availabilities", ["user_id"], name: "index_availabilities_on_user_id"
 
-  create_table "experts", force: :cascade do |t|
-    t.string   "username"
-    t.string   "email"
-    t.string   "password_digest"
-    t.string   "phone_number"
-    t.string   "university"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-  end
-
   create_table "questions", force: :cascade do |t|
     t.string "question_text"
   end
@@ -54,6 +44,10 @@ ActiveRecord::Schema.define(version: 20190419233053) do
     t.string   "university"
     t.boolean  "survey_completed", default: false
     t.string   "time_zone"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "guardian_email"
+    t.string   "guardian_phone"
   end
 
 end

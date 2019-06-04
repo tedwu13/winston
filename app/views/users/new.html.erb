@@ -1,3 +1,13 @@
-<h1 align="center">Sign up for Winston</h1>
+<div class="container">
+  <div class="col-sm-8 col-sm-offset-2">
+    <% if @user.is_expert %>
+      <h1 align="center">Join our expert team</h1>
+      <h4 align="center">Help high school students find the answers to their questions. Are you a student? <a href="/signup">Click here</a> to get connected.</h4>
+    <% else %>
+      <h1 align="center">Get connected</h1>
+      <h4 align="center">Start receiving personalized mentorship and guidance today. Looking to join as an advisor? <a href="/experts_signup">Click here</a> to get involved.</h4>
+    <% end %>
+  </div>
+</div>
 
 <%= render 'form' %>
