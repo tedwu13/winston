@@ -2,22 +2,26 @@
 @import "bootstrap-sprockets";
 
 @font-face {
-  font-family: 'Roboto';
-  src: url('Roboto/Roboto-Regular.ttf') format('truetype');
-  src: url('Roboto/Roboto-Bold.ttf') format('truetype');
-  src: url('Roboto/Roboto-Light.ttf') format('truetype');
+  font-family: 'PlayfairDisplay';
+  src: url('Playfair_Display/PlayfairDisplay-Regular.ttf') format('truetype');
+  src: url('Playfair_Display/PlayfairDisplay-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('Open_Sans/OpenSans-Regular.ttf') format('truetype');
+  src: url('Open_Sans/OpenSans-Bold.ttf') format('truetype');
+  src: url('Open_Sans/OpenSans-Light.ttf') format('truetype');
 }
 
 
-$primary-color: #419f74;
+$ivy-green: #468266;
 $light-gray: #f7f7f7;
 $gray: #7f7f7f;
-$purple: #5d3fb7;
-$dark: #333333;
+$marine-blue: #03426f;
 
-// green color
 .primary-color {
-  color: $primary-color;
+  color: $ivy-green;
 }
 
 .white {
@@ -26,10 +30,6 @@ $dark: #333333;
 
 .light-icon-color {
   color: $light-gray;
-}
-
-.gray-background {
-  background-color: $light-gray;
 }
 
 .section-titles {
@@ -45,24 +45,15 @@ $dark: #333333;
   text-align: center;
 }
 
-.jumbotron-section {
-  color: white;
-}
-
-.jumbotron-text {
- padding-top: 1em;
- padding-bottom: 1em;
- font-size: 1.2em;
-}
-
 .jumbotron {
-  font-family: 'Roboto Slab', serif;
+  font-family: 'PlayfairDisplay', serif;
   position: relative;
   width: 100%;
   height: 100%;
   background-image: asset-url('background-flipped.jpg');
   background-size: cover;
-  height: 700px;
+  height: 800px;
+  margin-bottom: 0px;
 
   &:before {
     content: '';
@@ -79,8 +70,8 @@ $dark: #333333;
 #sign_up_header {
   width: 1000px;
   height: 170px;
-  font-family: 'Roboto';
-  font-size: 64px;
+  font-family: 'PlayfairDisplay';
+  font-size: 4em;
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
@@ -89,11 +80,39 @@ $dark: #333333;
   color: white;
 }
 
-.outside-btn {
-  color: $light-gray;
-  font-size: 1.0em;
-  margin: 0.25em;
-  background-color: $primary-color;
+.jumbotron-text {
+  width: 588px;
+  height: 99px;
+  font-family: 'OpenSans';
+  font-size: 1.4em;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5;
+  letter-spacing: -0.1px;
+  color: white;
+}
+
+.sign-up-now {
+  width: 111px;
+  height: 22px;
+  font-family: 'OpenSans';
+  font-size: 1em;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  color: white;
+}
+
+// custom sign up bottom style
+.btn.btn-success {
+  width: 153px;
+  height: 50px;
+  border: solid 1px $ivy-green;
+  background-color: $ivy-green;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
 .what-we-do-container {
@@ -109,11 +128,7 @@ $dark: #333333;
 
 .how-it-works {
   padding-bottom: 2em;
-  margin-top: 2em;
-}
-
-.icon-background {
-  color: $primary-color;
+  background-image: linear-gradient(291deg, $marine-blue, #458166, $ivy-green);
 }
 
 .student-information {
