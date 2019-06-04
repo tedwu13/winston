@@ -173,17 +173,30 @@ h4 {
   background-color: white;
 }
 
+
+// MEET OUR TEAM
 .meet-our-team {
   padding-bottom: 3em;
   background-color: $light-gray;
+}
+
+.university {
+  width: 90%;
+}
+
+
+// WHAT STUDENTS ARE SAYING
+
+.what-students-are-saying {
+  padding-bottom: 3em;
 }
 
 .student-information {
   text-align: center;
 }
 
-.university {
-  width: 90%;
+.get-started-today {
+  background-image: linear-gradient(291deg, $marine-blue, #458166, $ivy-green);
 }
 
 footer {
