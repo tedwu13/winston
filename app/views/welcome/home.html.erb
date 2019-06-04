@@ -1,28 +1,33 @@
 <div class="jumbotron overlay">
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="container-fluid">
-      <!-- As a heading -->
-      <nav class="navbar-header navbar-light bg-light">
-        <span class="navbar-brand h4 white">
-          <i class="fa fa-graduation-cap light-icon-color"></i> Winston
-        </span>
-      </nav>
 
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-right">
-          <% if logged_in? %>
-            <li><%= link_to "Edit your profile", edit_user_path(current_user) %></li>
-            <li><%= link_to "Log out", logout_path, method: :delete %></li>
-          <% else %>
-            <li><%= link_to "Log in", login_path %></li>
-            <li><%= link_to "Sign up", signup_path %></li>
-          <% end %>
-        </ul>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-  </nav>
+  <div class="row navbar">
+     <div class="col-sm-1"></div>
+     <div class="col-sm-10">
+       <nav class="navbar">
+           <!-- As a heading -->
+           <nav class="navbar-header navbar-light bg-light">
+             <span class="navbar-brand h4 white">
+               <i class="fa fa-graduation-cap light-icon-color"></i> Winston
+             </span>
+           </nav>
+
+           <!-- Collect the nav links, forms, and other content for toggling -->
+           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+             <ul class="nav navbar-nav navbar-right">
+               <% if logged_in? %>
+                 <li><%= link_to "Edit your profile", edit_user_path(current_user) %></li>
+                 <li><%= link_to "Log out", logout_path, method: :delete %></li>
+               <% else %>
+                 <li><%= link_to "Log in", login_path %></li>
+                 <li><%= link_to "Sign up", signup_path %></li>
+               <% end %>
+             </ul>
+           </div><!-- /.navbar-collapse -->
+       </nav>
+     </div>
+  </div>
+
+
 
   <div class="container-fluid">
     <div class="row jumbotron-section">
