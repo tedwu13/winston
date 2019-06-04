@@ -2,67 +2,87 @@
 @import "bootstrap-sprockets";
 
 @font-face {
-  font-family: 'Roboto';
-  src: url('Roboto/Roboto-Regular.ttf') format('truetype');
-  src: url('Roboto/Roboto-Bold.ttf') format('truetype');
-  src: url('Roboto/Roboto-Light.ttf') format('truetype');
+  font-family: 'PlayfairDisplay';
+  src: url('Playfair_Display/PlayfairDisplay-Regular.ttf') format('truetype');
+  src: url('Playfair_Display/PlayfairDisplay-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('Open_Sans/OpenSans-Regular.ttf') format('truetype');
+  src: url('Open_Sans/OpenSans-Bold.ttf') format('truetype');
+  src: url('Open_Sans/OpenSans-Light.ttf') format('truetype');
 }
 
 
-$primary-color: #419f74;
-$light-gray: #f7f7f7;
+$ivy-green: #468266;
+$light-gray: #f9f9fb;
 $gray: #7f7f7f;
-$purple: #5d3fb7;
-$dark: #333333;
+$marine-blue: #03426f;
 
-// green color
 .primary-color {
-  color: $primary-color;
+  color: $ivy-green;
 }
 
 .white {
   color: white;
 }
 
-.light-icon-color {
-  color: $light-gray;
-}
-
-.gray-background {
-  background-color: $light-gray;
-}
-
-.section-titles {
-  font-weight: bolder;
-}
-
-.subheaders {
-  padding-top: 2em;
-  padding-bottom: 2em;
+.marine-blue {
+  color: $marine-blue;
 }
 
 .center {
   text-align: center;
 }
 
-.jumbotron-section {
-  color: white;
+h3 {
+  font-family: PlayfairDisplay;
+  font-size: 48px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.8px;
+  text-align: center;
 }
 
-.jumbotron-text {
- padding-top: 1em;
- padding-bottom: 1em;
- font-size: 1.2em;
+h4 {
+  font-family: 'OpenSans';
+  font-size: 22px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.section-text {
+  font-family: 'OpenSans';
+  font-size: 22px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5;
+  letter-spacing: -0.1px;
+  text-align: center;
+}
+
+.subheaders {
+  padding-top: 3em;
+  padding-bottom: 3em;
+  text-align: center;
 }
 
 .jumbotron {
-  font-family: 'Roboto Slab', serif;
+  font-family: 'PlayfairDisplay', serif;
   position: relative;
   width: 100%;
   height: 100%;
   background-image: asset-url('background-flipped.jpg');
   background-size: cover;
-  height: 700px;
+  height: 800px;
+  margin-bottom: 0px;
 
   &:before {
     content: '';
@@ -77,45 +97,106 @@ $dark: #333333;
 }
 
 #sign_up_header {
-  color: $light-gray;
+  width: 1000px;
+  height: 170px;
+  font-family: 'PlayfairDisplay';
+  font-size: 4em;
   font-weight: bold;
-  font-size: 2.5em;
-  margin-bottom: 0.5em;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.8px;
+  color: white;
 }
 
-.outside-btn {
-  color: $light-gray;
-  font-size: 1.0em;
-  margin: 0.25em;
-  background-color: $primary-color;
+.jumbotron-text {
+  width: 588px;
+  height: 99px;
+  font-family: 'OpenSans';
+  font-size: 1.4em;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5;
+  letter-spacing: -0.1px;
+  color: white;
 }
 
-.what-we-do-container {
+.sign-up-now {
+  width: 111px;
+  height: 22px;
+  font-family: 'OpenSans';
+  font-size: 1em;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  color: white;
+}
+
+// custom sign up bottom style
+.btn.btn-success {
+  width: 153px;
+  height: 50px;
+  border: solid 1px $ivy-green;
+  background-color: $ivy-green;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.how-it-works {
+  padding-bottom: 5em;
+  background-image: linear-gradient(291deg, $marine-blue, #458166, $ivy-green);
+}
+
+.how-it-works-step {
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+}
+
+.what-we-do-section {
+  padding-bottom: 3em;
+}
+
+.what-we-do-subsection {
   float: left;
   text-align: left;
-  width: 48%;
-  height: 120px;
+  width: 588px;
+  height: 166px;
   margin-left: 2%;
   margin-top: 2%;
   background-color: $light-gray;
   padding-left: 2%;
+  border-radius: 12px;
+  box-shadow: 0 1px 8px 0 rgba(51, 51, 51, 0.2);
+  background-color: white;
 }
 
-.how-it-works {
-  padding-bottom: 2em;
-  margin-top: 2em;
+
+// MEET OUR TEAM
+.meet-our-team {
+  padding-bottom: 3em;
+  background-color: $light-gray;
 }
 
-.icon-background {
-  color: $primary-color;
+.university {
+  width: 90%;
+}
+
+
+// WHAT STUDENTS ARE SAYING
+
+.what-students-are-saying {
+  padding-bottom: 3em;
 }
 
 .student-information {
   text-align: center;
 }
 
-.university {
-  width: 90%;
+.get-started-today {
+  background-image: linear-gradient(291deg, $marine-blue, #458166, $ivy-green);
 }
 
 footer {

@@ -30,41 +30,86 @@
 
 
   <div class="container-fluid">
-    <div class="row jumbotron-section">
+    <div class="row">
       <div class="col-sm-1"></div>
       <div class="col-sm-8">
-        <h2 id="sign_up_header">Introducing Winston, your personal <br>
-      educational concierge</h2>
+        <h1 id="sign_up_header">Introducing Winston, your personal <br>
+      educational concierge</h1>
         <div class="jumbotron-text">Winston connects students with experts all around the world <br>
           for help in navigating all of the most important education <br>
           decisions</div>
-        <%= link_to "SIGN UP NOW", signup_path, class: "btn btn-small outside-btn" %>
+          <%= link_to "SIGN UP NOW", signup_path, class: "sign-up-now btn btn-success" %>
       </div>
       <div class="col-sm-3"></div>
     </div>
   </div>
 </div>
 
+<div class="how-it-works">
+  <div class="subheaders">
+    <h3 class="section-titles white">How it works</h3>
+    <p class="section-text white">Get connected with an expert in three quick, easy steps, no matter where you are</p>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="how-it-works-step col-sm-4">
+        <span class="fa-stack fa-5x">
+          <i class="fa fa-circle fa-stack-2x white"></i>
+          <i class="fa fa-user-edit fa-stack-1x marine-blue"></i>
+        </span>
+        <h4>Tell us about you</h4>
+        <p>Answer a few questions about yourself to help <br>
+          Winston create a personalized experience
+        </p>
+      </div>
+
+      <div class="how-it-works-step col-sm-4">
+        <span class="fa-stack fa-5x">
+          <i class="fa fa-circle fa-stack-2x white"></i>
+          <i class="fa fa-users fa-stack-1x marine-blue"></i>
+        </span>
+        <h4>Choose an advisor</h4>
+        <p>Select an advisor from customized list of experts,<br>
+          handpicked especially for you by Winston
+        </p>
+      </div>
+
+      <div class="how-it-works-step col-sm-4">
+        <span class="fa-stack fa-5x">
+          <i class="fa fa-circle fa-stack-2x white"></i>
+          <i class="fa fa-video fa-stack-1x marine-blue"></i>
+        </span>
+        <h4>Get your questions answered</h4>
+        <p>Attend your remote expert advising session,<br>
+          all details coordinated by Winston
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <div class="what-we-do-section">
-  <div class="center">
-    <h3 class="section-titles">What We Do</h3>
-    <p>Whether you're looking for help with applications, deciding between universities, or figuring out where to live</p>
-    <p>and what classes to take, Winston was created for you.</p>
+  <div class="subheaders">
+    <h3 class="section-titles">What we do</h3>
+    <p class="section-text">Whether you're looking for help with applications, deciding between universities, or figuring out where to live<br>
+      and what classes to take, Winston was created for you.
+    </p>
   </div>
 
   <div class="container-fluid">
     <div class="row">
       <div class="col-sm-1"></div>
       <div class="col-sm-10">
-        <div class="what-we-do-container">
+        <div class="what-we-do-subsection">
           <h4><i class="primary-color fas fa-hands-helping"></i> Guidance</h4>
           <p>Get assistance, no matter what stage you're at, from our carefully <br>
             vetted experts- all current students, alumni, or former <br>
             admissions counselors from top universities</p>
         </div>
 
-        <div class="what-we-do-container">
+        <div class="what-we-do-subsection">
           <h4><i class="primary-color fas fa-pen-fancy"></i> Application</h4>
           <p>Not feeling too confident with an essay or a personal statement? <br>
           Let our experts take a second look. Or a third. Or a fourth. Let's <br>
@@ -79,13 +124,13 @@
     <div class="row">
       <div class="col-sm-1"></div>
       <div class="col-sm-10">
-        <div class="what-we-do-container">
+        <div class="what-we-do-subsection">
           <h4><i class="primary-color fas fa-search"></i> Discovery</h4>
           <p>Let us help you find the right higher education institution for you<br>
           not what a ranking list says</p>
         </div>
 
-        <div class="what-we-do-container">
+        <div class="what-we-do-subsection">
           <h4><i class="primary-color fas fa-question"></i> Ask Anything</h4>
           <p>Navigating the college admissions process can be complicated.<br>
           Winston makes it simple enpowering students to make<br>
@@ -97,56 +142,67 @@
   </div>
 </div>
 
-<div class="how-it-works gray-background">
-  <div class="subheaders center">
-    <h3 class="section-titles">How it works</h3>
-    <p>Get connected with an expert in three quick, easy steps, no matter where you are</p>
+<div class="meet-our-team light-gray">
+  <div class="subheaders">
+    <h3 class="section-titles">Meet our team</h3>
+    <p class="section-text">Winston's advisors come from a wide variety of backgrounds and experiences, <br>
+    and we are constantly working to find the best expert to meet your needs</p>
   </div>
 
   <div class="container-fluid">
     <div class="row">
-    <div class="col-sm-2"></div>
-    <div class="how-it-works-step col-sm-3">
-      <span class="fa-stack fa-5x">
-        <i class="fa fa-circle fa-stack-2x icon-background"></i>
-        <i class="fa fa-user-edit fa-stack-1x light-icon-color"></i>
-      </span>
-      <h4>Tell us about you</h4>
-      <p>Answer a few questions about yourself to help <br>
-        Winston create a personalized experience
-      </p>
+      <div class="col-sm-1"></div>
+      <div class="col-sm-10">
+        <div class="col-sm-4">
+          <img class="university" src="../../assets/northwestern.png"/>
+        </div>
+        <div class="col-sm-4">
+          <img class="university" src="../../assets/northwestern.png"/>
+        </div>
+        <div class="col-sm-4">
+          <img class="university" src="../../assets/northwestern.png"/>
+        </div>
+      </div>
+      <div class="col-sm-1"></div>
     </div>
-
-    <div class="how-it-works-step col-sm-3">
-      <span class="fa-stack fa-5x">
-        <i class="fa fa-circle fa-stack-2x icon-background"></i>
-        <i class="fa fa-users fa-stack-1x light-icon-color"></i>
-      </span>
-      <h4>Choose an advisor</h4>
-      <p>Select an advisor from customized list of experts,<br>
-        handpicked especially for you by Winston
-      </p>
-    </div>
-
-    <div class="how-it-works-step col-sm-3">
-      <span class="fa-stack fa-5x">
-        <i class="fa fa-circle fa-stack-2x icon-background"></i>
-        <i class="fa fa-video fa-stack-1x light-icon-color"></i>
-      </span>
-      <h4>Get your questions answered</h4>
-      <p>Attend your remote expert advising session,<br>
-        all details coordinated by Winston
-      </p>
-    </div>
-    <div class="col-sm-2"></div>
   </div>
+
+  <br><br><br><br>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-3"></div>
+      <div class="col-sm-6">
+        <div class="col-sm-6">
+          <img class="university" src="../../assets/northwestern.png"/>
+        </div>
+        <div class="col-sm-6">
+          <img class="university" src="../../assets/northwestern.png"/>
+        </div>
+      </div>
+      <div class="col-sm-3"></div>
+    </div>
   </div>
+  <br><br><br><br>
+
+  <p class="center">Interested in offering your expertise? <%= link_to "Click here", experts_signup_path, class: "primary-color" %> to get more involved</p>
+</div>
+
+
+<div class="flexible-offerings">
+  <h3 class="left-headers">Flexible Offerings</h3>
+  <p class="section-text">Whether you're looking for some quick advice on 1-on-1 counseling relationship, Winston has many options to meet your needs</br>
+  Sign up now to receive a customized quote or contact us to learn more</p>
+  <%= link_to "SIGN UP NOW", signup_path, class: "btn btn-small btn-primary outside-btn" %>
+  <!-- <div class="text-center">
+    <img src="../../assets/flexible-offerings-woman" class="rounded" alt="...">
+  </div> -->
 </div>
 
 <div class="what-students-are-saying">
-  <div class="subheaders center">
+  <div class="subheaders">
     <h3 class="section-titles">What students are saying</h3>
-      <p>See how Winston can help</p>
+      <p>Learn how Winston can help</p>
   </div>
 
   <div class="container-fluid">
@@ -208,67 +264,10 @@
   <br><br><br><br>
 </div>
 
-<div class="meet-our-team gray-background">
-  <div class="subheaders center">
-    <h3 class="section-titles">Meet our team</h3>
-    <p>Winston's advisors come from a wide variety of backgrounds and experiences, <br>
-    and we are constantly working to find the best expert to meet your needs</p>
-  </div>
-
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-sm-1"></div>
-      <div class="col-sm-10">
-        <div class="col-sm-4">
-          <img class="university" src="../../assets/northwestern.png"/>
-        </div>
-        <div class="col-sm-4">
-          <img class="university" src="../../assets/northwestern.png"/>
-        </div>
-        <div class="col-sm-4">
-          <img class="university" src="../../assets/northwestern.png"/>
-        </div>
-      </div>
-      <div class="col-sm-1"></div>
-    </div>
-  </div>
-
-  <br><br><br><br>
-
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-sm-3"></div>
-      <div class="col-sm-6">
-        <div class="col-sm-6">
-          <img class="university" src="../../assets/northwestern.png"/>
-        </div>
-        <div class="col-sm-6">
-          <img class="university" src="../../assets/northwestern.png"/>
-        </div>
-      </div>
-      <div class="col-sm-3"></div>
-    </div>
-  </div>
-  <br><br><br><br>
-</div>
-
-
-<div class="flexible-offerings">
-  <div class="subheaders center">
-    <h3 class="section-titles">Flexible Offerings</h3>
-    <p>Whether you're looking for some quick advice on 1-on-1 counseling relationship, Winston has many options to meet your needs</p>
-    <p>Sign up now to receive a customized quote or contact us to learn more</p>
-    <%= link_to "SIGN UP NOW", signup_path, class: "btn btn-small btn-primary outside-btn" %>
-    <div class="text-center">
-      <img src="../../assets/flexible-offerings-woman" class="rounded" alt="...">
-    </div>
-  </div>
-</div>
-
-<div class="get-started-today gray-background">
-  <div class="subheaders center">
-    <h3 class="section-titles">Get started today</h3>
-    <p>Let Winston help you create a better, brighter future</p>
+<div class="get-started-today">
+  <div class="subheaders">
+    <h3 class="section-titles white">Get started today</h3>
+    <p class="section-text white">Let Winston help you create a better, brighter future</p>
     <%= link_to "SCHEDULE YOUR FIRST CALL", signup_path, class: "btn btn-lg btn-primary outside-btn" %>
   </div>
 </div>
