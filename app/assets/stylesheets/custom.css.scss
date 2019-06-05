@@ -40,7 +40,8 @@ $marine-blue: #03426f;
 
 // NAVIGATION
 .logo {
-  font-size: 2.0em
+  font-size: 2.0em;
+  color: white;
 }
 
 .nav-button {
@@ -142,26 +143,18 @@ h4 {
   color: white;
 }
 
-.sign-up-now {
-  width: 111px;
-  height: 22px;
-  font-family: 'OpenSans';
-  font-size: 1em;
-  font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  letter-spacing: normal;
-  color: white;
-}
 
 // custom sign up style
 .btn.btn-success {
-  width: 153px;
   height: 50px;
   border: solid 1px $ivy-green;
   background-color: $ivy-green;
   padding-top: 1em;
   padding-bottom: 1em;
+  font-family: 'OpenSans';
+  font-size: 1em;
+  font-weight: bold;
+  color: white;
 }
 
 .how-it-works {
@@ -228,8 +221,8 @@ h4 {
   font-size: 16px;
   font-weight: bold;
   line-height: normal;
-  letter-spacing: normal;
 }
+
 
 // WHAT STUDENTS ARE SAYING
 
