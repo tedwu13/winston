@@ -37,6 +37,25 @@ $marine-blue: #03426f;
   text-align: center;
 }
 
+// NAVIGATION
+.logo {
+  font-size: 2.0em
+}
+
+.nav-button {
+  width: 100px;
+  height: 50px;
+  font-size: 1em;
+  margin: 1em;
+}
+
+.dropdown-menu {
+  a {
+    font-size: 1.1em;
+    margin-left: 10px;
+  }
+}
+
 h3 {
   font-family: PlayfairDisplay;
   font-size: 48px;
@@ -254,30 +273,7 @@ h4 {
   background-image: linear-gradient(291deg, $marine-blue, #458166, $ivy-green);
 }
 
-footer {
-  margin-top: 45px;
-  padding-top: 5px;
-  border-top: 1px solid #eaeaea;
-  color: #777;
-}
-
-footer a:hover {
-  color: #222;
-}
-
-footer small {
-  float: left;
-}
-
-footer ul {
-  float: right;
-  list-style: none;
-}
-
-footer ul li {
-  float: left;
-  margin-left: 15px;
-}
+// FOOTER
 
 .input_checkbox input {
   width: auto !important;
