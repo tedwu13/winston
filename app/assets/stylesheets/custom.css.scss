@@ -17,6 +17,7 @@
 
 $ivy-green: #468266;
 $light-gray: #f9f9fb;
+$dark-gray: #333333;
 $gray: #7f7f7f;
 $marine-blue: #03426f;
 
@@ -198,25 +199,58 @@ h4 {
 }
 
 .btn.btn-primary {
-  width: 153px;
   height: 50px;
   border: solid 1px white;
   background:rgba(0,0,0,0);
   padding-top: 1em;
   padding-bottom: 1em;
+  font-family: OpenSans;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: normal;
+  letter-spacing: normal;
 }
 
 // WHAT STUDENTS ARE SAYING
 
 .what-students-are-saying {
+  padding-top: 3em;
   padding-bottom: 3em;
 }
 
-.student-information {
-  text-align: center;
+.student-testimonial {
+  width: 384px;
+  height: 274px;
+  border-radius: 12px;
+  box-shadow: 0 1px 8px 0 rgba(51, 51, 51, 0.2);
+  background-color: white;
+  margin-left: 5em;
 }
 
+.student-quote {
+  width: 324px;
+  height: 120px;
+  font-family: OpenSans;
+  font-size: 18px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: $dark-gray;
+}
+
+.student-name {
+  color: $marine-blue;
+  font-weight: bold;
+}
+
+
+// GET STARTED TODAY
+
 .get-started-today {
+  padding-top: 3em;
+  padding-bottom: 3em;
   background-image: linear-gradient(291deg, $marine-blue, #458166, $ivy-green);
 }
 
