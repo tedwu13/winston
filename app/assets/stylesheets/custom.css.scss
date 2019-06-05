@@ -130,6 +130,38 @@ h4 {
   color: white;
 }
 
+a {
+  color: #468266;
+}
+
+p {
+  font-family: 'OpenSans';
+}
+
+.register-header {
+  margin-bottom: 25px;
+}
+
+.register-description {
+  margin-bottom: 40px;
+}
+
+.small-text {
+  font-size: 16px;
+}
+
+.tiny-text {
+  font-size: 14px;
+}
+
+.mini-text {
+  font-size: 12px;
+}
+
+.already-have-account {
+  margin-bottom: 75px;
+}
+
 .jumbotron-text {
   width: 588px;
   height: 99px;
@@ -155,6 +187,13 @@ h4 {
   font-size: 1em;
   font-weight: bold;
   color: white;
+}
+
+.register-button {
+  font-family: 'OpenSans';
+  background-color: $ivy-green;
+  color: white;
+  border-radius: 0px;
 }
 
 .how-it-works {

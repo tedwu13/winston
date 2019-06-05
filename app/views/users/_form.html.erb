@@ -38,11 +38,10 @@
         </div>
 
         <div class="form-group">
-          <div class="col-sm-3 col-sm-offset-4">
-            <%= f.label :time_zone, 'Timezone' %>
+          <div class="col-sm-4 col-sm-offset-4">
+            <p><%= f.label :time_zone, 'Timezone', { class: 'tiny-text' } %></p>
             <%= f.time_zone_select :time_zone, nil, { include_blank: true }, { class: 'form-control' } %>
           </div>
-          <div class="col-sm-1"><small>Why do I need to select my timezone?</small></div>
         </div>
 
         <% if @user.is_expert %>
@@ -55,7 +54,7 @@
         <% else %>
           <div class="form-group">
             <div class="col-sm-4 col-sm-offset-4">
-              <%= f.label :time_zone, 'Parent or guardian contact' %>
+              <p><%= f.label :guardian_email, 'Parent or guardian contact', { class: 'tiny-text' } %></p>
               <%= f.text_field :guardian_email, class: "form-control", placeholder: "Email address" %>
             </div>
           </div>
@@ -70,19 +69,18 @@
         <div class="form-group">
           <div class="col-sm-4 col-sm-offset-4">
             <% if @user.new_record? %>
-              <div>By clicking <%= @user.is_expert ? 'Join Us' : 'Sign Up' %>, I agree to the Terms of Use and Privacy Policy.</div>
-              <br/>
+              <p class="mini-text">By clicking <%= @user.is_expert ? 'Join Us' : 'Sign Up' %>, I agree to the Terms of Use and Privacy Policy.</p>
             <% end %>
             <%= f.submit(if @user.new_record?
                            @user.is_expert ? 'Join Us' : 'Sign Up'
                          else
                            "Update your account"
-                         end, class: "btn btn-primary btn-lg btn-block") %>
+                         end, class: "btn btn-block register-button") %>
           </div>
         </div>
 
         <% if @user.new_record? %>
-          <div align="center">Already have an account? <a href="/login">Log in</a>.</div>
+          <p align="center" class="mini-text already-have-account">Already have an account? <a href="/login">Log in</a>.</p>
         <% end %>
     <% end %>
     </div>
