@@ -63,9 +63,8 @@ h4 {
   font-weight: 300;
   font-style: normal;
   font-stretch: normal;
-  line-height: 1.5;
+  line-height: 1.7;
   letter-spacing: -0.1px;
-  text-align: center;
 }
 
 .subheaders {
@@ -134,7 +133,7 @@ h4 {
   color: white;
 }
 
-// custom sign up bottom style
+// custom sign up style
 .btn.btn-success {
   width: 153px;
   height: 50px;
@@ -184,6 +183,28 @@ h4 {
   width: 90%;
 }
 
+//FLEXIBLE OFFERINGS
+
+.flexible-offerings {
+  background-image: asset-url('flexible_offerings_image.jpeg');
+  padding-top: 5em;
+  padding-bottom: 5em;
+  height: 546px;
+  background-color: rgba(0, 0, 0, 0.65);
+}
+
+.left-headers {
+  text-align: left;
+}
+
+.btn.btn-primary {
+  width: 153px;
+  height: 50px;
+  border: solid 1px white;
+  background:rgba(0,0,0,0);
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
 
 // WHAT STUDENTS ARE SAYING
 
