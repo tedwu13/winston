@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   post 'login', to: "sessions#create"
   delete 'logout', to: "sessions#destroy"
 
-  get 'survey', to: "surveys#index"
+  resources :survey, only: [:index, :show]
   resources :answers, only: [:create]
 
   get 'scheduler', to: "scheduler#index"

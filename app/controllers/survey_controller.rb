@@ -1,4 +1,4 @@
-class SurveysController < ApplicationController
+class SurveyController < ApplicationController
   DEFAULT_QUESTIONS = [1,2,3,4,5]
   def index
     @questions_list = DEFAULT_QUESTIONS.join(",")
@@ -18,5 +18,15 @@ class SurveysController < ApplicationController
     end
 
     render 'index'
+  end
+
+  def show
+    question_number = params[:id].to_i
+    unless DEFAULT_QUESTIONS.include? question_number
+      head 404 and return
+    end
+
+    @green_rectangles_count = question_number
+    @grey_rectangles_count = 5 - question_number
   end
 end
