@@ -1,25 +1,31 @@
-<h1 align="center">Log in</h1>
+<div class="container">
+  <div class="col-sm-8 col-sm-offset-2">
+    <div align="center">
+      <h3 class="login-header">Welcome back!</h3>
+      <h4 class="login-description">Log in with your email address.</br>Are you an advisor? <a href="#">Contact us</a> for any of your needs.</h4>
+    </div>
+  </div>
 
-<%= form_for(:session, :html => {class: "form-horizontal", role: "form"}, url: login_path) do |f| %>
-  <div class="form-group">
-    <div class="control-label col-sm-2">
-      <%= f.label :email %>
-    </div>
-    <div class="col-sm-8">
-      <%= f.email_field :email, class: "form-control", placeholder: "Enter email", autofocus: true %>
-    </div>
+  <div class="col-xs-12 login-spacer">
+    <%= form_for(:session, :html => {class: "form-horizontal", role: "form"}, url: login_path) do |f| %>
+
+      <div class="form-group">
+        <div class="col-sm-4 col-sm-offset-4">
+          <%= f.email_field :email, class: "form-control", placeholder: "Email address", autofocus: true %>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-4 col-sm-offset-4">
+          <%= f.password_field :password, class: "form-control", placeholder: "Password", autocomplete: "off" %>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-4 col-sm-offset-4">
+          <%= f.submit "Join Us", class: "btn btn-block register-button" %>
+        </div>
+      </div>
+    <% end %>
   </div>
-  <div class="form-group">
-    <div class="control-label col-sm-2">
-      <%= f.label :password %>
-    </div>
-    <div class="col-sm-8">
-      <%= f.password_field :password, class: "form-control", placeholder: "Enter password", autocomplete: "off" %>
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="col-sm-8 col-sm-offset-2">
-      <%= f.submit "Log in", class: "btn btn-primary btn-lg" %>
-    </div>
-  </div>
-<% end %>
+</div>

@@ -1,12 +1,9 @@
 source 'https://rubygems.org'
 
+ruby '2.3.6'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
-
-# Rails 4.2.5 requires bundler version to be < 2.0 and >= 1.30
-# Going to use 1.9.10 as the latest version that won't break rails 4.2.5
-gem 'bundler', '1.9.10'
 
 # Use SCSS for stylesheets
 gem 'bootstrap-sass', '~> 3.3.7'
