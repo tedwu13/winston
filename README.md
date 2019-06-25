@@ -22,11 +22,11 @@ Currently it is still a bit manual but here are the steps to deploy to Digital O
   - ```ssh tedwu@68.183.168.36```
   - Ask me for the password to ssh into this
 - Once we are in, you can cd ~/var/www/winston/code to go to the application code
-- I added the github hooks and since there is a two factor auth, I created a personal auth token (also ask me if you need the personal auth token)
+- Added github hooks and since there is a 2FA, I created a personal auth token (also ask me if you need the personal auth token)
 - If there are new gems, only install the gems in production
- - ```bundle install —deployment —without development test```
+  - ```bundle install —deployment —without development test```
 - Precompile rails assets and do db migrations
- - ```bundle exec rake assets:precompile db:migrate RAILS_ENV=production```
+  - ```bundle exec rake assets:precompile db:migrate RAILS_ENV=production```
 - Restart the application
   - ```bundle exec passenger-config restart-app $(pwd)```
   - if address is being used, then restart nginx by killing the process id
