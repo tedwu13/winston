@@ -3,15 +3,15 @@
 
 @font-face {
   font-family: 'PlayfairDisplay';
-  src: url('Playfair_Display/PlayfairDisplay-Regular.ttf') format('truetype');
-  src: url('Playfair_Display/PlayfairDisplay-Bold.ttf') format('truetype');
+  src: font-url('Playfair_Display/PlayfairDisplay-Regular.ttf') format('truetype');
+  src: font-url('Playfair_Display/PlayfairDisplay-Bold.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'OpenSans';
-  src: url('Open_Sans/OpenSans-Regular.ttf') format('truetype');
-  src: url('Open_Sans/OpenSans-Bold.ttf') format('truetype');
-  src: url('Open_Sans/OpenSans-Light.ttf') format('truetype');
+  src: font-url('Open_Sans/OpenSans-Regular.ttf') format('truetype');
+  src: font-url('Open_Sans/OpenSans-Bold.ttf') format('truetype');
+  src: font-url('Open_Sans/OpenSans-Light.ttf') format('truetype');
 }
 
 
