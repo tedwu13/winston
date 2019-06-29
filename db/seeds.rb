@@ -5,12 +5,12 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-questions = Question.create(
-    [
-        { question_text: "What is the preferred size of your college?" },
-        { question_text: "East coast or West coast?" },
-        { question_text: "What majors are you interested in?" },
-        { question_text: "What are your extracurricular activities?" },
-        { question_text: "What are some college that you are interested in?" },
-    ]
+Question.create(
+  [
+    { id: 1, question_text: 'What type of university are you interested in attending?' },
+    { id: 2, question_text: 'Which US region(s) would you like your future university to be located in?' },
+    { id: 3, question_text: 'What US College Rankings tier would you like your future university to be in?' },
+    { id: 4, question_text: 'What level of student body diversity are you looking for at your future university?' },
+    { id: 5, question_text: 'What is your ideal major of study?' }
+  ]
 )

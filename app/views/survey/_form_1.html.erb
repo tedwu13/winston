@@ -1,0 +1,20 @@
+<%= form_tag("/answers/#{@green_rectangles_count}", method: 'post', id: 'intake-survey') do %>
+  <h4 class="survey-question"><%= @question_text %> <i class="fa fa-question-circle"></i></h4>
+  <hr>
+  <div class="form-check form-radio">
+    <%= radio_button_tag @green_rectangles_count, 'Public', true, class: 'form-check-input' %>
+    <%= label_tag(@green_rectangles_count, 'Public', class: 'form-text') %>
+  </div>
+  <hr>
+  <div class="form-check form-radio">
+    <%= radio_button_tag @green_rectangles_count, 'Private', false, class: 'form-check-input' %>
+    <%= label_tag(@green_rectangles_count, 'Private', class: 'form-text') %>
+  </div>
+  <hr>
+  <div class="form-check form-radio">
+    <%= radio_button_tag @green_rectangles_count, 'No preference', false, class: 'form-check-input' %>
+    <%= label_tag(@green_rectangles_count, 'No preference', class: 'form-text') %>
+  </div>
+  <hr>
+  <%= button_tag('Continue', type: 'submit', class: 'btn register-button margin-top-50px margin-bottom-75px') %>
+<% end %>

@@ -1,7 +1,7 @@
 <div class="container">
   <h3>Let's get started</h3>
 
-  <div class="survey-rectangles">
+  <div class="survey-rectangles margin-bottom-35px">
     <% @green_rectangles_count.times do %>
       <div class="rectangle green"></div>
     <% end %>
@@ -10,11 +10,7 @@
     <% end %>
   </div>
 
-  <% if @green_rectangles_count > 1 %>
-    <a href="/survey/<%= @green_rectangles_count - 1 %>">Back</a>
-  <% end %>
-  <br/>
-  <% if @green_rectangles_count < 5 %>
-    <a href="/survey/<%= @green_rectangles_count + 1 %>">Next</a>
-  <% end %>
+  <div class="form-content">
+    <%= render "form_#{@green_rectangles_count}" %>
+  </div>
 </div>

@@ -26,6 +26,11 @@ class SurveyController < ApplicationController
       head 404 and return
     end
 
+    question = Question.find(question_number)
+    @question_text = question.question_text
+    answer = Answer.where(question_id: question_number, user: current_user).first
+    @answer_text = answer.nil? ? '' : answer.answer_text
+
     @green_rectangles_count = question_number
     @grey_rectangles_count = 5 - question_number
   end

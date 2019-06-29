@@ -221,6 +221,14 @@ p {
   border-radius: 0px;
 }
 
+.register-button-clear {
+  font-family: 'OpenSans';
+  background-color: white;
+  color: $ivy-green;
+  border: 1px solid $ivy-green;
+  border-radius: 0px;
+}
+
 .how-it-works {
   padding-bottom: 5em;
   background-image: linear-gradient(291deg, $marine-blue, #458166, $ivy-green);
@@ -372,4 +380,39 @@ p {
   min-width: 100px;
   margin-right: 5px;
   margin-bottom: 5px;
+}
+
+.margin-bottom-35px {
+  margin-bottom: 35px;
+}
+
+.margin-bottom-75px {
+  margin-bottom: 75px;
+}
+
+.margin-bottom-100px {
+  margin-bottom: 100px;
+}
+
+.margin-bottom-25vh {
+  margin-bottom: 25vh;
+}
+
+.margin-top-50px {
+  margin-top: 50px;
+}
+
+.margin-right-10px {
+  margin-right: 10px;
+}
+
+.form-radio {
+  margin-left: 35px;
+}
+
+.form-text {
+  font-family: OpenSans;
+  //font-weight: normal;
+  font-size: 1.1em;
+  margin-left: 15px;
 }
