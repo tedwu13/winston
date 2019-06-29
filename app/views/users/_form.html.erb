@@ -81,6 +81,8 @@
 
         <% if @user.new_record? %>
           <p align="center" class="mini-text already-have-account">Already have an account? <a href="/login">Log in</a>.</p>
+        <% else %>
+          <p class="already-have-account"></p>
         <% end %>
     <% end %>
     </div>
