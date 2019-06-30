@@ -3,8 +3,6 @@ class AnswersController < ApplicationController
 
   # POST /answers
   def create
-    puts params
-
     question_id = params[:question_id]
     if question_id.to_i == 2
       answer = []

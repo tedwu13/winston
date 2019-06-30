@@ -1,5 +1,5 @@
-<%= form_tag("/answers", method: 'post', id: 'intake-survey') do %>
-  <h4 class="survey-question"><%= @question_text %> <i class="fa fa-question-circle"></i></h4>
+<%= form_tag("/answers", method: 'post', id: 'intake-survey-1', class: 'intake-survey') do %>
+  <h4 class="survey-question"><%= @question_text %> <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="top" title="Public schools are funded by state governments, while private schools are not."></i></h4>
   <hr>
   <div class="form-check form-radio">
     <%= radio_button_tag @green_rectangles_count, 'public', @answer_text == 'public', class: 'form-check-input' %>
@@ -16,6 +16,7 @@
     <%= label_tag(@green_rectangles_count, 'No preference', class: 'form-text') %>
   </div>
   <hr>
+  <p class="form-error">Please select one of the choices above.</p>
   <input type="hidden" name="question_id" value="1" />
   <%= button_tag('Continue', type: 'submit', class: 'btn register-button margin-top-50px margin-bottom-75px') %>
 <% end %>

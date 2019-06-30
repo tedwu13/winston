@@ -1,9 +1,9 @@
-<%= form_tag("/answers", method: 'post', id: 'intake-survey') do %>
+<%= form_tag("/answers", method: 'post', id: 'intake-survey-5', class: 'intake-survey') do %>
   <h4 class="survey-question"><%= @question_text %></h4>
   <div class="row">
     <div class="col-xs-4">
       <div class="form-group margin-bottom-100px">
-        <input list="majors" name="5" class="form-control" value="<%= @answer_text %>"/>
+        <input list="majors" name="5" class="form-control" value="<%= @answer_text %>" id="major-selection"/>
       </div>
     </div>
 
@@ -13,9 +13,11 @@
       <option value="Film">
       <option value="Computers">
       <option value="Art History">
+      <option value="No preference">
     </datalist>
   </div>
 
+  <p class="form-error">Please input a desired major, or "No preference".</p>
   <input type="hidden" name="question_id" value="5" />
   <div class="buttons-row margin-top-50px margin-bottom-25vh">
     <a href='/survey/4'>

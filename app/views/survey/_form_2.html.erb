@@ -1,4 +1,4 @@
-<%= form_tag("/answers", method: 'post', id: 'intake-survey') do %>
+<%= form_tag("/answers", method: 'post', id: 'intake-survey-2', class: 'intake-survey') do %>
   <h4 class="survey-question"><%= @question_text %></h4>
   <p>Click here to view a map of US regions</p>
   <hr>
@@ -28,10 +28,11 @@
   </div>
   <hr>
   <div class="form-check form-radio">
-    <%= check_box_tag 'no_preference', true, @answer_set.include?('no_preference'), class: 'form-check-input' %>
-    <%= label_tag(@green_rectangles_count, 'No preference', class: 'form-text') %>
+    <%= check_box_tag 'no_preference', true, @answer_set.include?('no_preference'), class: 'form-check-input no-location-preference' %>
+    <%= label_tag(@green_rectangles_count, 'No preference (selecting this will disable other options)', class: 'form-text') %>
   </div>
   <hr>
+  <p class="form-error">Please select at least one of the choices above.</p>
   <input type="hidden" name="question_id" value="2" />
   <div class="buttons-row margin-top-50px margin-bottom-75px">
     <a href='/survey/1'>

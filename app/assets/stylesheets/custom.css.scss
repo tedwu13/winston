@@ -161,6 +161,7 @@ p {
   display: inline-block;
   width: 100px;
   height: 12px;
+  margin-right: 3px;
 }
 
 .green {
@@ -419,4 +420,9 @@ p {
 
 .no-underline {
   text-decoration: none;
+}
+
+.form-error {
+  color: red;
+  visibility: hidden;
 }

@@ -1,5 +1,5 @@
-<%= form_tag("/answers", method: 'post', id: 'intake-survey') do %>
-  <h4 class="survey-question"><%= @question_text %></h4>
+<%= form_tag("/answers", method: 'post', id: 'intake-survey-3', class: 'intake-survey') do %>
+  <h4 class="survey-question">What <a href="https://www.usnews.com/best-colleges/rankings/national-universities" target="_blank">US College Rankings tier</a> would you like your future university to be in?</h4>
   <hr>
   <div class="form-check form-radio">
     <%= radio_button_tag @green_rectangles_count, 'top_25', @answer_text == 'top_25', class: 'form-check-input' %>
@@ -21,6 +21,7 @@
     <%= label_tag(@green_rectangles_count, 'No preference', class: 'form-text') %>
   </div>
   <hr>
+  <p class="form-error">Please select one of the choices above.</p>
   <input type="hidden" name="question_id" value="3" />
   <div class="buttons-row margin-top-50px margin-bottom-75px">
     <a href='/survey/2'>
