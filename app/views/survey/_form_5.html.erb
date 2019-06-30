@@ -1,10 +1,13 @@
-<%= form_tag("/answers/#{@green_rectangles_count}", method: 'post', id: 'intake-survey') do %>
+<%= form_tag("/answers", method: 'post', id: 'intake-survey') do %>
   <h4 class="survey-question"><%= @question_text %></h4>
   <div class="form-group margin-bottom-100px">
     <%= select @green_rectangles_count, 'major', [], {}, { class: 'form-control' } %>
   </div>
+  <input type="hidden" name="question_id" value="5" />
   <div class="buttons-row margin-top-50px margin-bottom-25vh">
-    <%= button_tag('Back', type: 'button', class: 'btn register-button-clear margin-right-10px') %>
+    <a href='/survey/4'>
+      <%= button_tag('Back', type: 'button', class: 'btn register-button-clear margin-right-10px') %>
+    </a>
     <%= button_tag('Continue', type: 'submit', class: 'btn register-button') %>
   </div>
 <% end %>

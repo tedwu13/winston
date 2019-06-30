@@ -1,4 +1,4 @@
-<%= form_tag("/answers/#{@green_rectangles_count}", method: 'post', id: 'intake-survey') do %>
+<%= form_tag("/answers", method: 'post', id: 'intake-survey') do %>
   <h4 class="survey-question"><%= @question_text %></h4>
   <hr>
   <div class="form-check form-radio">
@@ -21,8 +21,11 @@
     <%= label_tag(@green_rectangles_count, 'No preference', class: 'form-text') %>
   </div>
   <hr>
+  <input type="hidden" name="question_id" value="4" />
   <div class="buttons-row margin-top-50px margin-bottom-75px">
-    <%= button_tag('Back', type: 'button', class: 'btn register-button-clear margin-right-10px') %>
+    <a href='/survey/3'>
+      <%= button_tag('Back', type: 'button', class: 'btn register-button-clear margin-right-10px') %>
+    </a>
     <%= button_tag('Continue', type: 'submit', class: 'btn register-button') %>
   </div>
 
