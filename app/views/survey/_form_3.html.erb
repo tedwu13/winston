@@ -2,22 +2,22 @@
   <h4 class="survey-question"><%= @question_text %></h4>
   <hr>
   <div class="form-check form-radio">
-    <%= radio_button_tag @green_rectangles_count, 'Top 25', true, class: 'form-check-input' %>
+    <%= radio_button_tag @green_rectangles_count, 'top_25', @answer_text == 'top_25', class: 'form-check-input' %>
     <%= label_tag(@green_rectangles_count, 'Top 25', class: 'form-text') %>
   </div>
   <hr>
   <div class="form-check form-radio">
-    <%= radio_button_tag @green_rectangles_count, 'Top 50', false, class: 'form-check-input' %>
+    <%= radio_button_tag @green_rectangles_count, 'top_50', @answer_text == 'top_50', class: 'form-check-input' %>
     <%= label_tag(@green_rectangles_count, 'Top 50', class: 'form-text') %>
   </div>
   <hr>
   <div class="form-check form-radio">
-    <%= radio_button_tag @green_rectangles_count, 'Top 100', false, class: 'form-check-input' %>
+    <%= radio_button_tag @green_rectangles_count, 'top_100', @answer_text == 'top_100', class: 'form-check-input' %>
     <%= label_tag(@green_rectangles_count, 'Top 100', class: 'form-text') %>
   </div>
   <hr>
   <div class="form-check form-radio">
-    <%= radio_button_tag @green_rectangles_count, 'No preference', false, class: 'form-check-input' %>
+    <%= radio_button_tag @green_rectangles_count, 'no_preference', @answer_text == 'no_preference', class: 'form-check-input' %>
     <%= label_tag(@green_rectangles_count, 'No preference', class: 'form-text') %>
   </div>
   <hr>
