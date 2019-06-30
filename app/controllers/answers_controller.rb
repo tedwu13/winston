@@ -29,6 +29,11 @@ class AnswersController < ApplicationController
     end
 
     next_question_id = question_id.to_i + 1
-    redirect_to "/survey/#{next_question_id}"
+
+    if question_id.to_i == 5
+      redirect_to "/"
+    else
+      redirect_to "/survey/#{next_question_id}"
+    end
   end
 end

@@ -1,8 +1,21 @@
 <%= form_tag("/answers", method: 'post', id: 'intake-survey') do %>
   <h4 class="survey-question"><%= @question_text %></h4>
-  <div class="form-group margin-bottom-100px">
-    <%= select @green_rectangles_count, 'major', [], {}, { class: 'form-control' } %>
+  <div class="row">
+    <div class="col-xs-4">
+      <div class="form-group margin-bottom-100px">
+        <input list="majors" name="5" class="form-control" value="<%= @answer_text %>"/>
+      </div>
+    </div>
+
+    <datalist id="majors">
+      <option value="Computer Science">
+      <option value="Science">
+      <option value="Film">
+      <option value="Computers">
+      <option value="Art History">
+    </datalist>
   </div>
+
   <input type="hidden" name="question_id" value="5" />
   <div class="buttons-row margin-top-50px margin-bottom-25vh">
     <a href='/survey/4'>
