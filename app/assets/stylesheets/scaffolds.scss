@@ -1,9 +1,4 @@
-@font-face {
-  font-family: 'OpenSans';
-  src: font-url('Open_Sans/OpenSans-Regular.ttf') format('truetype');
-  src: font-url('Open_Sans/OpenSans-Bold.ttf') format('truetype');
-  src: font-url('Open_Sans/OpenSans-Light.ttf') format('truetype');
-}
+@import "variables.scss";
 
 body {
   overflow-x: hidden;
@@ -51,3 +46,4 @@ p, ol, ul, td {
     list-style: square;
   }
 }
+
