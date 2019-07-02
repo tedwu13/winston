@@ -1,42 +1,14 @@
 <div class="container">
-  <h1>Welcome to Winston!</h1>
+  <h3>Hello, <%= @user.first_name %>!</h3>
   <br>
-  <h3>Your remaining tasks:</h3>
+  <h4 class="margin-bottom-35px">Welcome to Winston, your personal education concierge.</h4>
 
-  <!-- SURVEY LINK -->
-  <% if !@user.survey_completed %>
-    <a href="/survey/1">
-      <button type="button" class="btn btn-primary">📝 Please let us know about your college ambitions, so we can match you with the best possible counselors.</button>
-    </a>
-    <br><br>
-  <% end %>
-
-  <!-- SCHEDULE LINK -->
-  <% if @user.is_expert %>
-    <a href="/scheduler">
-      <button type="button" class="btn btn-primary">📅 Please let know about your availability as an expert.</button>
-    </a>
-    <br><br>
-  <% else %>
-    <a href="/scheduler">
-      <button type="button" class="btn btn-primary">📅 Select some times when you are available to speak to a counselor.</button>
-    </a>
-    <br><br>
-  <% end %>
-
+  <p>You currently have 0 call(s) scheduled</p>
+  <p>Your personal concierge will reach out to you shortly</p>
   <!-- PAYMENTS LINK -->
-  <a href="/charges/new">
+<!--   <a href="/charges/new">
     <button type="button" class="btn btn-primary">💳 Once you submit payment, your account will be credited and you will be matched with a counselor.</button>
-  </a>
+  </a> -->
   <br><br>
-
-  <h3>Your completed tasks:</h3>
-
-  <% if @user.survey_completed %>
-    <a href="/survey">
-      <button type="button" class="btn btn-primary">✅ Thank you for submitting your intake survey! You can click here to edit it.</button>
-    </a>
-    <br><br>
-  <% end %>
 
 </div>
