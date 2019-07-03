@@ -35,7 +35,7 @@
 
         <div class="form-group">
           <div class="col-sm-4 col-sm-offset-4">
-            <%= f.text_field :phone_number, class: "form-control", placeholder: @user.is_expert ? "Phone number" : "Phone number (optional)" %>
+            <%= f.text_field :phone_number, class: "form-control", placeholder: "Phone number (optional)" %>
           </div>
         </div>
 
@@ -46,42 +46,27 @@
           </div>
         </div>
 
-        <% if @user.is_expert %>
-          <div class="form-group">
-            <div class="col-sm-4 col-sm-offset-4">
-              <%= f.text_field :university, class: 'form-control', placeholder: "University" %>
-            </div>
-            <%= f.hidden_field :is_expert, value: true %>
-          </div>
-        <% else %>
-          <div class="form-group">
-            <div class="col-sm-4 col-sm-offset-4">
-              <p><%= f.label :guardian_email, 'Parent or guardian contact', { class: 'tiny-text' } %></p>
-              <%= f.text_field :guardian_email, class: "form-control", placeholder: "Email address" %>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <div class="col-sm-4 col-sm-offset-4">
-              <%= f.text_field :guardian_phone, class: "form-control", placeholder: "Phone number (optional)" %>
-            </div>
-          </div>
-        <% end %>
-
         <div class="form-group">
           <div class="col-sm-4 col-sm-offset-4">
-            <% if @user.new_record? %>
-              <p class="mini-text">By clicking <%= @user.is_expert ? 'Join Us' : 'Sign Up' %>, I agree to the Terms of Use and Privacy Policy.</p>
-            <% end %>
-            <%= f.submit(if @user.new_record?
-                           @user.is_expert ? 'Join Us' : 'Sign Up'
-                         else
-                           "Update your account"
-                         end, class: "btn btn-block register-button") %>
+            <p><%= f.label :guardian_email, 'Parent or guardian contact', { class: 'tiny-text' } %></p>
+            <%= f.text_field :guardian_email, class: "form-control", placeholder: "Email address" %>
           </div>
         </div>
 
-        <%= render "devise/shared/links" %>
+        <div class="form-group">
+          <div class="col-sm-4 col-sm-offset-4">
+            <%= f.text_field :guardian_phone, class: "form-control", placeholder: "Phone number (optional)" %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-sm-4 col-sm-offset-4">
+            <p class="mini-text">By clicking Sign Up, I agree to the Terms of Use and Privacy Policy.</p>
+            <%= f.submit('Sign Up', class: "btn btn-block register-button") %>
+          </div>
+        </div>
+
+        <%= render "students/shared/links" %>
       <% end %>
     </div>
   </div>

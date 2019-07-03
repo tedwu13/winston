@@ -12,20 +12,8 @@ class User < ActiveRecord::Base
   validates :email, presence: true, length: { maximum: 105 },
             uniqueness: { case_sensitive: false },
             format: { with: VALID_EMAIL_REGEX }
-  validates :phone_number, presence: true, :if => :is_expert?
 
   validates :time_zone, presence: true
 
-  validates :guardian_email, presence: true, :unless => :is_expert?
-  validates :guardian_email, presence: false, :if => :is_expert?
-  validates :guardian_phone, presence: false, :if => :is_expert?
-
-  validates :university, presence: true, :if => :is_expert?
-  validates :university, presence: false, :unless => :is_expert?
-
   has_many :availabilities
-
-  def is_expert?
-    self.is_expert
-  end
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190703043301) do
+ActiveRecord::Schema.define(version: 20190703071914) do
 
   create_table "answers", force: :cascade do |t|
     t.integer "user_id"
@@ -43,7 +43,6 @@ ActiveRecord::Schema.define(version: 20190703043301) do
     t.datetime "updated_at",                             null: false
     t.boolean  "admin",                  default: false, null: false
     t.string   "phone_number",                           null: false
-    t.boolean  "is_expert",              default: false, null: false
     t.string   "university"
     t.boolean  "survey_completed",       default: false, null: false
     t.string   "time_zone",                              null: false
@@ -51,9 +50,11 @@ ActiveRecord::Schema.define(version: 20190703043301) do
     t.string   "last_name",                              null: false
     t.string   "guardian_email"
     t.string   "guardian_phone"
+    t.string   "type"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["type"], name: "index_users_on_type"
 
 end

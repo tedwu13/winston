@@ -6,10 +6,11 @@ Rails.application.routes.draw do
   root 'welcome#home'
   get 'about', to: 'welcome#about'
 
-  devise_for :users
+  devise_for :users, skip: :registrations
+  devise_for :students, only: :registrations
+  devise_for :experts, only: :registrations
 
   get 'signup', to: "users#new"
-  get 'experts_signup', to: "users#new"
 
   resources :users, except: [:index, :new]
 
