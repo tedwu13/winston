@@ -1,0 +1,37 @@
+
+
+// Fonts + Colors
+@font-face {
+  font-family: 'PlayfairDisplay';
+  src: font-url('Playfair_Display/PlayfairDisplay-Regular.ttf') format('truetype');
+  src: font-url('Playfair_Display/PlayfairDisplay-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: font-url('Open_Sans/OpenSans-Regular.ttf') format('truetype');
+  src: font-url('Open_Sans/OpenSans-Bold.ttf') format('truetype');
+  src: font-url('Open_Sans/OpenSans-Light.ttf') format('truetype');
+}
+
+$ivy-green: #468266;
+$light-gray: #f9f9fb;
+$medium-gray: #c4c4c4;
+$dark-gray: #333333;
+$gray: #7f7f7f;
+$marine-blue: #03426f;
+$white: #FFFFFF;
+
+
+.primary-color {
+  color: $ivy-green;
+}
+
+.white {
+  color: $white;
+}
+
+.marine-blue {
+  color: $marine-blue;
+}
+
