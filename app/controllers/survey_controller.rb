@@ -1,4 +1,6 @@
 class SurveyController < ApplicationController
+  before_action :authenticate_user!
+
   DEFAULT_QUESTIONS = [1,2,3,4,5]
 
   def show
@@ -17,5 +19,10 @@ class SurveyController < ApplicationController
 
     @green_rectangles_count = question_number
     @grey_rectangles_count = 5 - question_number
+
+    if question_number == 5
+      current_user.survey_completed = true
+      current_user.save!
+    end
   end
 end
