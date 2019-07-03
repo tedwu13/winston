@@ -369,6 +369,10 @@ p {
   margin-bottom: 25vh;
 }
 
+.margin-bottom-35vh {
+  margin-bottom: 35vh;
+}
+
 .margin-top-50px {
   margin-top: 50px;
 }
@@ -395,4 +399,13 @@ p {
 .form-error {
   color: red;
   visibility: hidden;
+}
+
+.no-url-effect {
+  color: black;
+}
+
+.no-url-effect:hover {
+  text-decoration: none;
+  color: black;
 }
