@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   root 'welcome#home'
   get 'about', to: 'welcome#about'
 
+  devise_for :users
+
   get 'signup', to: "users#new"
   get 'experts_signup', to: "users#new"
 

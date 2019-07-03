@@ -53,3 +53,6 @@ group :production do
   gem 'rails_12factor'
 end
 
+# devise
+gem 'devise', '~>4.6.2'
+
