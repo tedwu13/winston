@@ -1,16 +1,26 @@
-<h2>Forgot your password?</h2>
-
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+<div class="container">
+  <div class="col-sm-8 col-sm-offset-2">
+    <div align="center">
+      <h3 class="login-header">Forgot your password?</h3>
+      <h4 class="login-description">Enter your email and we’ll send you instructions on how to reset your password. Need more help? Contact <a href="mailto:info@winston.com">info@winston.com</a>. </h4>
+    </div>
   </div>
 
-  <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
-  </div>
-<% end %>
+  <div class="col-xs-12 login-spacer">
+    <%= form_for(resource, as: resource_name, url: password_path(resource_name), :html => {method: :post, class: "form-horizontal", role: "form"}) do |f| %>
+      <div class="form-group">
+        <div class="col-sm-4 col-sm-offset-4">
+          <%= f.email_field :email, class: "form-control", placeholder: "Email address", autofocus: true, autocomplete: "email" %>
+        </div>
+      </div>
 
-<%= render "devise/shared/links" %>
+      <div class="form-group">
+        <div class="col-sm-4 col-sm-offset-4">
+          <%= f.submit('Submit', class: "btn btn-block register-button") %>
+        </div>
+      </div>
+
+      <p align="center" class="mini-text already-have-account"><%= link_to "Cancel", new_user_session_url %></p>
+    <% end %>
+  </div>
+</div>
