@@ -8,47 +8,47 @@
 
         <div class="form-group">
           <div class="col-sm-2 col-sm-offset-4">
-            <%= f.text_field :first_name, class: "form-control", placeholder: "First name" %>
+            <%= f.text_field :first_name, class: "form-control", placeholder: "First name", required: true %>
           </div>
           <div class="col-sm-2">
-            <%= f.text_field :last_name, class: "form-control", placeholder: "Last name" %>
+            <%= f.text_field :last_name, class: "form-control", placeholder: "Last name", required: true %>
           </div>
         </div>
 
         <div class="form-group">
           <div class="col-sm-4 col-sm-offset-4">
-            <%= f.email_field :email, class: "form-control", placeholder: "Email address", autocomplete: "email" %>
+            <%= f.email_field :email, class: "form-control", placeholder: "Email address", autocomplete: "email", required: true %>
           </div>
         </div>
 
         <div class="form-group">
           <div class="col-sm-4 col-sm-offset-4">
-            <%= f.password_field :password, class: "form-control", placeholder: "Password", autocomplete: "new-password" %>
+            <%= f.password_field :password, class: "form-control", placeholder: "Password", autocomplete: "new-password", required: true %>
           </div>
         </div>
 
         <div class="form-group">
           <div class="col-sm-4 col-sm-offset-4">
-            <%= f.password_field :password_confirmation, class: "form-control", placeholder: "Confirm password", autocomplete: "new-password" %>
+            <%= f.password_field :password_confirmation, class: "form-control", placeholder: "Confirm password", autocomplete: "new-password", required: true %>
           </div>
         </div>
 
         <div class="form-group">
           <div class="col-sm-4 col-sm-offset-4">
-            <%= f.text_field :phone_number, class: "form-control", placeholder: "Phone number" %>
+            <%= f.text_field :phone_number, class: "form-control", placeholder: "Phone number", required: true %>
           </div>
         </div>
 
         <div class="form-group">
           <div class="col-sm-4 col-sm-offset-4">
             <p><%= f.label :time_zone, 'Timezone', { class: 'tiny-text' } %></p>
-            <%= f.time_zone_select :time_zone, nil, { include_blank: true }, { class: 'form-control' } %>
+            <%= f.time_zone_select :time_zone, nil, { include_blank: true, required: true }, { class: 'form-control' } %>
           </div>
         </div>
 
         <div class="form-group">
           <div class="col-sm-4 col-sm-offset-4">
-            <%= f.text_field :university, class: 'form-control', placeholder: "University" %>
+            <%= f.text_field :university, class: 'form-control', placeholder: "University", required: true %>
           </div>
           <%= f.hidden_field :is_expert, value: true %>
         </div>
