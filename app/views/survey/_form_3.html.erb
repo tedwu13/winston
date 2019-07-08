@@ -2,23 +2,23 @@
   <h4 class="survey-question">What <a href="https://www.usnews.com/best-colleges/rankings/national-universities" target="_blank">US College Rankings tier</a> would you like your future university to be in?</h4>
   <hr>
   <div class="form-check form-radio">
-    <%= radio_button_tag @green_rectangles_count, 'top_25', @answer_text == 'top_25', class: 'form-check-input' %>
-    <%= label_tag(@green_rectangles_count, 'Top 25', class: 'form-text') %>
+    <%= radio_button_tag @qna[:id], 'top_25', @qna[:answer] == 'top_25', class: 'form-check-input' %>
+    <%= label_tag(@qna[:id], 'Top 25', class: 'form-text') %>
   </div>
   <hr>
   <div class="form-check form-radio">
-    <%= radio_button_tag @green_rectangles_count, 'top_50', @answer_text == 'top_50', class: 'form-check-input' %>
-    <%= label_tag(@green_rectangles_count, 'Top 50', class: 'form-text') %>
+    <%= radio_button_tag @qna[:id], 'top_50', @qna[:answer] == 'top_50', class: 'form-check-input' %>
+    <%= label_tag(@qna[:id], 'Top 50', class: 'form-text') %>
   </div>
   <hr>
   <div class="form-check form-radio">
-    <%= radio_button_tag @green_rectangles_count, 'top_100', @answer_text == 'top_100', class: 'form-check-input' %>
-    <%= label_tag(@green_rectangles_count, 'Top 100', class: 'form-text') %>
+    <%= radio_button_tag @qna[:id], 'top_100', @qna[:answer] == 'top_100', class: 'form-check-input' %>
+    <%= label_tag(@qna[:id], 'Top 100', class: 'form-text') %>
   </div>
   <hr>
   <div class="form-check form-radio">
-    <%= radio_button_tag @green_rectangles_count, 'no_preference', @answer_text == 'no_preference', class: 'form-check-input' %>
-    <%= label_tag(@green_rectangles_count, 'No preference', class: 'form-text') %>
+    <%= radio_button_tag @qna[:id], 'no_preference', @qna[:answer] == 'no_preference', class: 'form-check-input' %>
+    <%= label_tag(@qna[:id], 'No preference', class: 'form-text') %>
   </div>
   <hr>
   <p class="form-error">Please select one of the choices above.</p>

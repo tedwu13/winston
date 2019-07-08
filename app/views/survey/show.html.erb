@@ -2,15 +2,15 @@
   <h3>Let's get started</h3>
 
   <div class="survey-rectangles margin-bottom-35px">
-    <% @green_rectangles_count.times do %>
+    <% @qna[:id].times do %>
       <div class="rectangle green"></div>
     <% end %>
-    <% @grey_rectangles_count.times do %>
+    <% (5 - @qna[:id]).times do %>
       <div class="rectangle grey"></div>
     <% end %>
   </div>
 
   <div class="form-content">
-    <%= render "form_#{@green_rectangles_count}" %>
+    <%= render "form_#{@qna[:id]}" %>
   </div>
 </div>

@@ -1,24 +1,24 @@
 <%= form_tag("/answers", method: 'post', id: 'intake-survey-4', class: 'intake-survey') do %>
-  <h4 class="survey-question"><%= @question_text %></h4>
+  <h4 class="survey-question"><%= @qna[:question_text] %></h4>
   <hr>
   <div class="form-check form-radio">
-    <%= radio_button_tag @green_rectangles_count, 'highly_diverse', @answer_text == 'highly_diverse', class: 'form-check-input' %>
-    <%= label_tag(@green_rectangles_count, 'Highly diverse with many international students', class: 'form-text') %>
+    <%= radio_button_tag @qna[:id], 'highly_diverse', @qna[:answer] == 'highly_diverse', class: 'form-check-input' %>
+    <%= label_tag(@qna[:id], 'Highly diverse with many international students', class: 'form-text') %>
   </div>
   <hr>
   <div class="form-check form-radio">
-    <%= radio_button_tag @green_rectangles_count, 'somewhat_diverse', @answer_text == 'somewhat_diverse', class: 'form-check-input' %>
-    <%= label_tag(@green_rectangles_count, 'Somewhat diverse with international students', class: 'form-text') %>
+    <%= radio_button_tag @qna[:id], 'somewhat_diverse', @qna[:answer] == 'somewhat_diverse', class: 'form-check-input' %>
+    <%= label_tag(@qna[:id], 'Somewhat diverse with international students', class: 'form-text') %>
   </div>
   <hr>
   <div class="form-check form-radio">
-    <%= radio_button_tag @green_rectangles_count, 'less_diverse', @answer_text == 'less_diverse', class: 'form-check-input' %>
-    <%= label_tag(@green_rectangles_count, 'Less diverse with fewer international students', class: 'form-text') %>
+    <%= radio_button_tag @qna[:id], 'less_diverse', @qna[:answer] == 'less_diverse', class: 'form-check-input' %>
+    <%= label_tag(@qna[:id], 'Less diverse with fewer international students', class: 'form-text') %>
   </div>
   <hr>
   <div class="form-check form-radio">
-    <%= radio_button_tag @green_rectangles_count, 'no_preference', @answer_text == 'no_preference', class: 'form-check-input' %>
-    <%= label_tag(@green_rectangles_count, 'No preference', class: 'form-text') %>
+    <%= radio_button_tag @qna[:id], 'no_preference', @qna[:answer] == 'no_preference', class: 'form-check-input' %>
+    <%= label_tag(@qna[:id], 'No preference', class: 'form-text') %>
   </div>
   <hr>
   <p class="form-error">Please select one of the choices above.</p>

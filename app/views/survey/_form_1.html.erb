@@ -1,19 +1,19 @@
 <%= form_tag("/answers", method: 'post', id: 'intake-survey-1', class: 'intake-survey') do %>
-  <h4 class="survey-question"><%= @question_text %> <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="top" title="Public schools are funded by state governments, while private schools are not."></i></h4>
+  <h4 class="survey-question"><%= @qna[:question_text] %> <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="top" title="Public schools are funded by state governments, while private schools are not."></i></h4>
   <hr>
   <div class="form-check form-radio">
-    <%= radio_button_tag @green_rectangles_count, 'public', @answer_text == 'public', class: 'form-check-input' %>
-    <%= label_tag(@green_rectangles_count, 'Public', class: 'form-text') %>
+    <%= radio_button_tag @qna[:id], 'public', @qna[:answer] == 'public', class: 'form-check-input' %>
+    <%= label_tag(@qna[:id], 'Public', class: 'form-text') %>
   </div>
   <hr>
   <div class="form-check form-radio">
-    <%= radio_button_tag @green_rectangles_count, 'private', @answer_text == 'private', class: 'form-check-input' %>
-    <%= label_tag(@green_rectangles_count, 'Private', class: 'form-text') %>
+    <%= radio_button_tag @qna[:id], 'private', @qna[:answer] == 'private', class: 'form-check-input' %>
+    <%= label_tag(@qna[:id], 'Private', class: 'form-text') %>
   </div>
   <hr>
   <div class="form-check form-radio">
-    <%= radio_button_tag @green_rectangles_count, 'no_preference', @answer_text == 'no_preference', class: 'form-check-input' %>
-    <%= label_tag(@green_rectangles_count, 'No preference', class: 'form-text') %>
+    <%= radio_button_tag @qna[:id], 'no_preference', @qna[:answer] == 'no_preference', class: 'form-check-input' %>
+    <%= label_tag(@qna[:id], 'No preference', class: 'form-text') %>
   </div>
   <hr>
   <p class="form-error">Please select one of the choices above.</p>
