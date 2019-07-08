@@ -6,8 +6,8 @@
     </div>
   </div>
 
-  <div class="col-xs-12 login-spacer">
-    <%= form_for(resource, as: resource_name, url: session_path(resource_name), :html => {class: "form-horizontal", role: "form"}) do |f| %>
+  <div class="col-xs-12">
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name), :html => {class: "form-horizontal margin-bottom-25vh", role: "form"}) do |f| %>
 
       <div class="form-group">
         <div class="col-sm-4 col-sm-offset-4">
@@ -32,7 +32,7 @@
       </div>
 
       <%- if devise_mapping.recoverable? %>
-        <p align="center" class="mini-text already-have-account">Forgot your password? <%= link_to "Click here", new_password_path(resource_name) %> to reset.</p>
+        <p align="center" class="mini-text">Forgot your password? <%= link_to "Click here", new_password_path(resource_name) %> to reset.</p>
       <% end %>
     <% end %>
   </div>

@@ -6,8 +6,8 @@
     </div>
   </div>
 
-  <div class="col-xs-12 login-spacer">
-    <%= form_for(resource, as: resource_name, url: password_path(resource_name), :html => {method: :put, class: "form-horizontal", role: "form"}) do |f| %>
+  <div class="col-xs-12">
+    <%= form_for(resource, as: resource_name, url: password_path(resource_name), :html => {method: :put, class: "form-horizontal margin-bottom-30vh", role: "form"}) do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
       <%= f.hidden_field :reset_password_token %>
 
