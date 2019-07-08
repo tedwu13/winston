@@ -173,6 +173,10 @@ a {
 
 
 // custom sign up style
+.btn {
+  border-radius: 0;
+}
+
 .btn.btn-success {
   height: 50px;
   border: solid 1px $ivy-green;
@@ -187,14 +191,12 @@ a {
 .register-button {
   background-color: $ivy-green;
   color: white;
-  border-radius: 0px;
 }
 
 .register-button-clear {
   background-color: white;
   color: $ivy-green;
   border: 1px solid $ivy-green;
-  border-radius: 0px;
 }
 
 .how-it-works {
@@ -236,6 +238,10 @@ a {
 .university {
   width: 90%;
   height: 85px;
+}
+
+.main-navbar {
+  margin-bottom: 50px;
 }
 
 //FLEXIBLE OFFERINGS
