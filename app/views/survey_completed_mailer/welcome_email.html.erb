@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  <style type="text/css" media="screen">
+    body {
+      width: 700px;
+      font-family: 'OpenSans', Arial, sans-serif;
+    }
+    .img-container > div {
+      display: inline-block;
+      margin-right: 25px;
+    }
+    .img-container > div > img {
+      max-width: 200px;
+    }
+  </style>
+</head>
+<body>
+<p>Welcome <%= @user.first_name %>!</p>
+<p>Thanks for trusting Winston with guiding you through your journey to higher education--you're in good hands!</p>
+<p>
+  My name is <%= @concierge_name %> and I'm going to be your personal educational concierge throughout this process. I've received your initial survey responses and am starting to custom source experts for you now. Please expect a follow-up from me with specific profiles for you to select from in the next few days.
+</p>
+<p>
+  In the meantime, if you'd like to get started right away, below are some of our best experts, ready to go. Let me know if any of their experiences sound helpful to you as you think about what you're looking for in this next step in life:
+</p>
+<div class="img-container">
+  <div>
+    <%= image_tag(attachments['choodry.png'].url) %>
+    <p><b>Nel Chongoarsu</b></p>
+  </div>
+  <div>
+    <%= image_tag(attachments['choodry.png'].url) %>
+    <p><b>Aman Charcuterie</b></p>
+  </div>
+  <div>
+    <%= image_tag(attachments['choodry.png'].url) %>
+    <p><b>Big Booty Judy</b></p>
+  </div>
+</div>
+
+<p>
+  And as always, don't hesitate to reach out directly to me if you have any questions or would like to narrow down your expert specifications. Everybody's path to higher education is slightly different, and that's perfectly okay. It's our job here at Winston to make sure you receive the most customized, curated, and insightful experience possible to get all of your questions and concerns addressed ahead of some really tough decisions in your life. Over the next few weeks we're going to do exactly that.
+</p>
+<p>Not for anyone else, but for you. Let's get to work!</p>
+<p>
+  Best,<br/>
+  <%= @concierge_name %>
+</p>
+</body>
+</html>
