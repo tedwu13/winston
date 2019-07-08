@@ -8,9 +8,11 @@ Rails.application.routes.draw do
   get 'connected', to: 'welcome#connected'
   resources :dashboard, only: [:index]
 
-  devise_for :users, skip: :registrations
-  devise_for :students, only: :registrations
-  devise_for :experts, only: :registrations
+  # devise_for :users, skip: :registrations, controllers: {
+  #   sessions: 'users/sessions'
+  # }
+  devise_for :students
+  devise_for :experts
 
   get 'signup', to: "users#new"
 

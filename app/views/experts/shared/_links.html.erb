@@ -1,5 +1,5 @@
 <%- if controller_name != 'sessions' %>
-  <p align="center" class="mini-text already-have-account">Already submitted your profile? <%= link_to "Contact us", new_user_session_path %> for more information.</p>
+  <p align="center" class="mini-text already-have-account">Already submitted your profile? <%= link_to "Contact us", '#' %> for more information.</p>
 <% end %>
 
 <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
