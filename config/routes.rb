@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#home'
   get 'about', to: 'welcome#about'
+  get 'connected', to: 'welcome#connected'
   resources :dashboard, only: [:index]
 
   devise_for :users, skip: :registrations

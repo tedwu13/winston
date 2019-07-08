@@ -1,6 +1,7 @@
 <!-- Navigation -->
 <!-- Hack to do this -->
-<% if controller.controller_name != "welcome"%>
+
+<% if controller.params[:action] != "home"%>
 <div class="main-navbar">
   <div class="col-sm-1"></div>
   <div class="col-sm-10">
