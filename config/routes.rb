@@ -25,9 +25,6 @@ Rails.application.routes.draw do
   resources :survey, only: [:index, :show]
   resources :answers, only: [:create]
 
-  get 'scheduler', to: "scheduler#index"
-
-  resources :availabilities, only: [:create, :destroy]
   resources :charges, only: [:new, :create]
 
   # Example of regular route:
