@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
   def home
-    redirect_to user_path(current_user) if user_signed_in?
+    redirect_to dashboard_index_path if user_signed_in?
   end
 end
