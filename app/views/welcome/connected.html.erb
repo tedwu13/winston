@@ -1,13 +1,16 @@
 <div class="container">
   <div class="col-sm-1"></div>
   <div class="col-sm-10 center">
+    <i class="fa fa-check-circle primary-color giant-icon margin-top-50px"></i>
     <h3>We'll be in touch!</h3>
 
-    <h4 class="margin-bottom-10vh">Thanks for submitting your information. One of our team members <br>
-      will be reaching out shortly
+    <h4 class="<%= expert_signed_in? && 'margin-bottom-25vh' %>">Thanks for submitting your information. One of our team members <br>
+      will be reaching out shortly<%= student_signed_in? ? '.' : ' to continue the process.' %>
     </h4>
-
-    <h4 class="margin-bottom-25vh">In the meantime, log in to access your dashboard, where you can keep track of your progress</h4>
+    <br/>
+    <% if student_signed_in? %>
+      <h4 class="margin-bottom-25vh">In the meantime, <a href="<%= dashboard_index_path %>">click here</a> to access your dashboard, where you can keep track of your progress.</h4>
+    <% end %>
   </div>
   <div class="col-sm-1"></div>
 </div>

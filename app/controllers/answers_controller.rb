@@ -19,7 +19,7 @@ class AnswersController < ApplicationController
     final_question? && mark_survey_completed!
 
     if final_question?
-      redirect_to dashboard_index_path
+      redirect_to connected_path
     else
       redirect_to survey_path(next_question_id)
     end
