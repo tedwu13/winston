@@ -21,7 +21,7 @@ Currently it is still a bit manual but here are the steps to deploy to Digital O
 - First we want to ssh into our DigitalOcean Server.
   - ```ssh tedwu@68.183.168.36```
   - Ask me for the password to ssh into this
-- Once we are in, you can cd ~/var/www/winston/code to go to the application code
+- Once we are in, you can cd /var/www/winston/code to go to the application code
 - Added github hooks and since there is a 2FA, I created a personal auth token (also ask me if you need the personal auth token)
 - If there are new gems, only install the gems in production
   - ```bundle install —deployment —without development test```
