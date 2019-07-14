@@ -236,8 +236,11 @@ a {
 }
 
 .university {
-  width: 90%;
+  display: block;
+  margin: auto;
+
   height: 85px;
+  margin-bottom: 65px;
 }
 
 .main-navbar {
