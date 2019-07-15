@@ -211,23 +211,55 @@ a {
 }
 
 .what-we-do-section {
-  padding-bottom: 3em;
+  padding-bottom: 4em;
 }
 
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .what-we-do-subsection {
+    height: 225px;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .what-we-do-subsection {
+    height: 190px;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .what-we-do-subsection {
+    height: 170px;
+  }
+}
+
+// what we do card
 .what-we-do-subsection {
-  float: left;
-  text-align: left;
-  width: 588px;
-  height: 166px;
-  margin-left: 2%;
-  margin-top: 2%;
-  background-color: $light-gray;
-  padding-left: 2%;
+  padding: 25px;
   border-radius: 12px;
   box-shadow: 0 1px 8px 0 rgba(51, 51, 51, 0.2);
-  background-color: white;
+  margin-bottom: 25px;
 }
 
+.what-we-do-subsection:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.subsection-column {
+  float: left;
+}
+
+.subsection-column.icon {
+  width: 35px;
+}
+
+.subsection-column.body {
+  width: 85%;
+}
 
 // MEET OUR TEAM
 .meet-our-team {
@@ -236,8 +268,11 @@ a {
 }
 
 .university {
-  width: 90%;
+  display: block;
+  margin: auto;
+
   height: 85px;
+  margin-bottom: 65px;
 }
 
 .main-navbar {

@@ -116,48 +116,72 @@
     </p>
   </div>
 
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-sm-1"></div>
-      <div class="col-sm-10">
-        <div class="what-we-do-subsection">
-          <h4><i class="primary-color fas fa-hands-helping"></i> Guidance</h4>
-          <p>Get assistance, no matter what stage you're at, from our carefully <br>
-            vetted experts- all current students, alumni, or former <br>
-            admissions counselors from top universities</p>
-        </div>
+  <div class="container">
 
+    <div class="row">
+      <div class="col-sm-6">
         <div class="what-we-do-subsection">
-          <h4><i class="primary-color fas fa-pen-fancy"></i> Application</h4>
-          <p>Not feeling too confident with an essay or a personal statement? <br>
-          Let our experts take a second look. Or a third. Or a fourth. Let's <br>
-          get it right, together.</p>
+          <div class="clear">
+            <div class="subsection-column icon">
+              <h4><i class="primary-color fas fa-hands-helping"></i></h4>
+            </div>
+            <div class="subsection-column body">
+              <h4>Guidance</h4>
+              <p>
+                Get assistance, no matter what stage you're at, from our carefully vetted experts--all current students, alumni, or former admissions counselors from top universities.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="col-sm-1"></div>
+
+      <div class="col-sm-6">
+        <div class="what-we-do-subsection">
+          <div class="subsection-column icon">
+            <h4><i class="primary-color fas fa-pen-alt"></i></h4>
+          </div>
+          <div class="subsection-column body">
+            <h4>Application</h4>
+            <p>
+              Not feeling too confident with an essay or a personal statement? Let our experts take a second look. Or a third. Or a fourth. Let's get it right, together.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="what-we-do-subsection">
+          <div class="subsection-column icon">
+            <h4><i class="primary-color fas fa-search"></i></h4>
+          </div>
+          <div class="subsection-column body">
+            <h4>Discovery</h4>
+            <p>
+              Let us help you find the right higher education institution for you--not what a ranking list says.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="what-we-do-subsection">
+          <div class="subsection-column icon">
+            <h4><i class="primary-color fas fa-question"></i></h4>
+          </div>
+          <div class="subsection-column body">
+            <h4>Ask Anything</h4>
+            <p>
+              Navigating the college admissions process can be complicated. Winston makes it simple enpowering students to make decisions on every topic.
+            </p>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-sm-1"></div>
-      <div class="col-sm-10">
-        <div class="what-we-do-subsection">
-          <h4><i class="primary-color fas fa-search"></i> Discovery</h4>
-          <p>Let us help you find the right higher education institution for you<br>
-          not what a ranking list says</p>
-        </div>
-
-        <div class="what-we-do-subsection">
-          <h4><i class="primary-color fas fa-question"></i> Ask Anything</h4>
-          <p>Navigating the college admissions process can be complicated.<br>
-          Winston makes it simple enpowering students to make<br>
-          decisions on every topic.</p>
-        </div>
-      </div>
-      <div class="col-sm-1"></div>
-    </div>
-  </div>
 </div>
 
 <div class="meet-our-team light-gray">
@@ -169,39 +193,30 @@
 
   <div class="container-fluid">
     <div class="row">
-      <div class="col-sm-2"></div>
-      <div class="col-sm-8">
-        <div class="col-sm-4">
+      <div class="col-lg-8 col-lg-offset-2">
+        <div class="col-lg-4">
           <%= image_tag "harvard.png", class:"university" %>
         </div>
-        <div class="col-sm-4">
+        <div class="col-lg-4">
           <%= image_tag "stanford.png", class:"university" %>
         </div>
-        <div class="col-sm-4">
+        <div class="col-lg-4">
           <%= image_tag "northwestern.png", class:"university" %>
         </div>
       </div>
-      <div class="col-sm-2"></div>
     </div>
-  </div>
 
-  <br><br><br><br>
-
-  <div class="container-fluid">
     <div class="row">
-      <div class="col-sm-3"></div>
-      <div class="col-sm-6">
-        <div class="col-sm-6">
+      <div class="col-lg-6 col-lg-offset-3">
+        <div class="col-lg-6">
           <%= image_tag "yale.png", class:"university" %>
         </div>
-        <div class="col-sm-6">
+        <div class="col-lg-6">
           <%= image_tag "princeton.png", class:"university" %>
         </div>
       </div>
-      <div class="col-sm-3"></div>
     </div>
   </div>
-  <br><br><br><br>
 
   <p class="center">Interested in offering your expertise? <%= link_to "Click here", new_expert_registration_path, class: "primary-color" %> to get more involved</p>
 </div>
@@ -286,6 +301,8 @@
   <div class="subheaders">
     <h3 class="section-titles white">Get started today</h3>
     <p class="section-text white">Let Winston help you create a better, brighter future</p>
+    <br/>
+    <br/>
     <%= link_to "SCHEDULE YOUR FIRST CALL", new_student_registration_path, class: "btn btn-lg btn-primary transparent-button" %>
   </div>
 </div>
