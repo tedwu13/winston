@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   root 'welcome#home'
   get 'about', to: 'welcome#about'
   get 'connected', to: 'welcome#connected'
+  get 'construction', to: 'welcome#construction'
+
   resources :dashboard, only: [:index]
 
   # devise_for :users, skip: :registrations, controllers: {
