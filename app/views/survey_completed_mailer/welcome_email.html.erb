@@ -5,35 +5,47 @@
   <style type="text/css" media="screen">
     body {
       background-color: #333333;
-      width: 700px;
       font-family: 'OpenSans', Arial, sans-serif;
+      display: inline;
     }
     .img-container > div {
       display: inline-block;
       margin-right: 25px;
     }
     .img-container > div > img {
-      max-width: 200px;
+      max-width: 180px;
     }
     .email-background {
       background: white;
       margin: 0 auto;
-      width: 100%;
+      width: 700px;
+      margin-bottom: 4em;
     }
-    .email-body {
+    .email-text {
       margin-left: 3%;
       margin-right: 3%;
+      padding-top: 1%;
+      padding-bottom: 1%;
     }
     .welcome-text {
       color: #468266;
+      font-family: 'OpenSans', 'Times New Roman', sans-serif;
+    }
+    .logo {
+      text-align: center;
+      margin-top: 3%;
+      margin-bottom: 1em;
     }
 
   </style>
 </head>
 <body>
+  <div class="logo">
+    <%= image_tag(attachments['winston_logo.png'].url, :style => "display: inline-block") %>
+  </div>
   <div class="email-background">
     <%= image_tag(attachments['email_background.png'].url, :style => "width: 100%; height: 280px;") %>
-    <div class="email-body">
+    <div class="email-text">
       <h1 class="welcome-text">Welcome <%= @user.first_name %>!</h1>
       <p>Thanks for trusting Winston with guiding you through your journey to higher education--you're in good hands!</p>
       <p>
