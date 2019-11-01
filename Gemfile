@@ -54,5 +54,5 @@ group :production do
 end
 
 # devise
-gem 'devise', '~>4.6.2'
+gem 'devise', '~>4.7.1'
 
