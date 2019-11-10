@@ -17,7 +17,7 @@ class AnswersController < ApplicationController
     end
 
     if final_question?
-      SurveyCompletedMailer.welcome_email(current_user).deliver_now unless current_user.survey_completed
+      SurveyCompletedMailer.welcome_email(current_user).deliver_now
       mark_survey_completed!
       redirect_to connected_path
     else
