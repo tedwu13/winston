@@ -1,12 +1,9 @@
 @import "bootstrap";
-@import "bootstrap-sprockets";
-
 @import "variables.scss";
 
 html * {
-  //font-size: 1em !important;
-  //color: #000 !important;
   font-family: 'OpenSans', sans-serif;
+  border: 1px solid black;
 }
 
 .center {
@@ -249,6 +246,7 @@ a {
 }
 
 .university {
+  // the purpose of this is to center the university logos within their div
   display: block;
   margin: auto;
 
@@ -285,43 +283,39 @@ a {
   line-height: normal;
 }
 
-
 // WHAT STUDENTS ARE SAYING
-
 .what-students-are-saying {
   padding-top: 3em;
   padding-bottom: 3em;
-}
 
-.student-testimonial {
-  width: 384px;
-  height: 274px;
-  border-radius: 12px;
-  box-shadow: 0 1px 8px 0 rgba(51, 51, 51, 0.2);
-  background-color: white;
-  margin-left: 5em;
-}
+  .row.text-center > div {
+    display: inline-block;
+    float: none;
+  }
 
-.student-quote {
-  width: 324px;
-  height: 120px;
-  font-size: 18px;
-  font-weight: 300;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: $dark-gray;
-}
+  .student-testimonial {
+    text-align: left;
+    border-radius: 12px;
+    box-shadow: 0 1px 8px 0 rgba(51, 51, 51, 0.2);
 
-.student-name {
-  color: $marine-blue;
-  font-weight: bold;
-}
+    margin-left: 2.5em;
+    margin-right: 2.5em;
+    margin-bottom: 20px;
+  }
 
+  .student-quote {
+    font-size: 18px;
+    font-weight: 300;
+    color: $dark-gray;
+  }
+
+  .student-name {
+    color: $marine-blue;
+    font-weight: bold;
+  }
+}
 
 // GET STARTED TODAY
-
 .get-started-today {
   padding-top: 3em;
   padding-bottom: 3em;
