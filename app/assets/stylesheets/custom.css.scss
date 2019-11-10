@@ -127,6 +127,13 @@ a {
   width: 100px;
   height: 12px;
   margin-right: 3px;
+
+  @media (max-width: 560px) {
+    width: 75px;
+  }
+  @media (max-width: 450px) {
+    width: 50px;
+  }
 }
 
 .green {
