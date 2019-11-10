@@ -1,65 +1,44 @@
-<div class="jumbotron overlay">
+<div class="jumbotron jumbotron-fluid landing-page-hero white">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg">
+      <span class="navbar-brand logo">
+        <i class="fa fa-graduation-cap"></i>Winston
+      </span>
 
-  <div class="row navbar">
-     <div class="col-sm-1"></div>
-     <div class="col-sm-10">
-       <nav class="navbar">
-           <!-- As a heading -->
-           <nav>
-             <span class="navbar-brand logo white">
-               <i class="fa fa-graduation-cap"></i>Winston
-             </span>
-           </nav>
-
-           <!-- Collect the nav links, forms, and other content for toggling -->
-           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-             <ul class="nav navbar-nav navbar-right">
-               <% if user_signed_in? %>
-                 <li><%= link_to "Edit your profile", edit_user_path(current_user) %></li>
-                 <li><%= link_to "Log out", logout_path, method: :delete %></li>
-               <% else %>
-                 <li class="nav-item dropdown">
-                   <a class="nav-link dropdown-toggle btn btn-primary transparent-button nav-button" href="#" id="navbarLoginDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                     LOG IN
-                   </a>
-                   <div class="dropdown-menu" aria-labelledby="navbarLoginDropdown">
-                     <%= link_to "I'm a student", new_student_session_path, class: "primary-color" %>
-                     <div class="dropdown-divider"></div>
-                     <%= link_to "I'm an expert", new_expert_session_path, class: "primary-color" %>
-                   </div>
-                 </li>
-                 <li class="nav-item dropdown">
-                   <a class="nav-link dropdown-toggle btn btn-success nav-button" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                     SIGN UP
-                   </a>
-                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                     <%= link_to "I'm a student", new_student_registration_path, class: "primary-color" %>
-                     <div class="dropdown-divider"></div>
-                     <%= link_to "I'm an expert", new_expert_registration_path, class: "primary-color" %>
-                   </div>
-                 </li>
-               <% end %>
-             </ul>
-           </div><!-- /.navbar-collapse -->
-       </nav>
-     </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle btn btn-primary transparent-button nav-button" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              LOG IN
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarLoginDropdown">
+              <%= link_to "I'm a student", new_student_session_path, class: "primary-color" %>
+              <div class="dropdown-divider"></div>
+              <%= link_to "I'm an expert", new_expert_session_path, class: "primary-color" %>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle btn btn-success nav-button" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              SIGN UP
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <%= link_to "I'm a student", new_student_registration_path, class: "primary-color" %>
+              <div class="dropdown-divider"></div>
+              <%= link_to "I'm an expert", new_expert_registration_path, class: "primary-color" %>
+            </div>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </nav>
   </div>
 
-
-
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-sm-1"></div>
-      <div class="col-sm-8">
-        <h1 id="sign_up_header">Introducing Winston, your personal <br>
-      educational concierge</h1>
-        <div class="jumbotron-text">Winston connects students with experts all around the world <br>
-          for help in navigating all of the most important education <br>
-          decisions</div>
-          <%= link_to "SIGN UP NOW", new_student_registration_path, class: "btn btn-success" %>
-      </div>
-      <div class="col-sm-3"></div>
+  <div class="container">
+    <h1 id="sign-up-header">Introducing Winston, your personal educational concierge</h1>
+    <div class="sign-up-content">
+      Winston connects students with experts all around the world for help in navigating all of the most important education decisions
     </div>
+    <%= link_to "SIGN UP NOW", new_student_registration_path, class: "btn btn-success" %>
   </div>
 </div>
 

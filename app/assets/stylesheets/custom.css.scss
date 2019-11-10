@@ -79,37 +79,31 @@ h4 {
   text-align: center;
 }
 
-.jumbotron {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background-image: asset-url('background-flipped.jpg');
-  background-size: cover;
+// LANDING PAGE HERO
+.landing-page-hero {
   height: 800px;
-  margin-bottom: 0px;
+  margin-bottom: 0;
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), image-url('background-flipped.jpg');
+  background-size: cover;
+  background-position: center top;
+}
 
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: linear-gradient(to bottom right,#151515,#151515);
-    opacity: .6;
+#sign-up-header {
+  margin-bottom: 30px;
+  font-size: 4em;
+  line-height: normal;
+  letter-spacing: 0.8px;
+
+  @media only screen and (max-width: 767px) {
+    font-size: 3.5em;
   }
 }
 
-#sign_up_header {
-  width: 1000px;
-  height: 170px;
-  font-size: 4em;
-  font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: 0.8px;
-  color: white;
+.sign-up-content {
+  max-width: 540px;
+  margin-bottom: 10px;
+  font-size: 1.4em;
+  line-height: 1.5;
 }
 
 a {
@@ -158,19 +152,6 @@ a {
 .mini-text {
   font-size: 12px;
 }
-
-.jumbotron-text {
-  width: 588px;
-  height: 99px;
-  font-size: 1.4em;
-  font-weight: 300;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.5;
-  letter-spacing: -0.1px;
-  color: white;
-}
-
 
 // custom sign up style
 .btn {
