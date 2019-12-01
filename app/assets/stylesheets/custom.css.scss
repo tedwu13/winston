@@ -172,6 +172,12 @@ a {
   color: white;
 }
 
+.hover-navy:hover
+{
+  background-color: #337ab7 !important;
+  border-color: #2e6da4 !important;
+}
+
 .register-button {
   background-color: $ivy-green;
   color: white;
@@ -447,4 +453,17 @@ a {
 
 .giant-icon {
   font-size: 10em;
+}
+
+.make-visible {
+  font-weight: 900 !important;
+}
+
+.make-visible:hover {
+  text-decoration: none !important;
+}
+
+.marine-blue-svg {
+  fill: $marine-blue;
+  z-index: 1;
 }
