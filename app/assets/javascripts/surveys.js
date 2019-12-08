@@ -50,7 +50,6 @@ const ready = function() {
 
   $(document)
     .on('click', '.intake-survey button[type=submit]', function(e) {
-      debugger;
       if(
         $('.intake-survey input[type=checkbox]:checked').length === 0 &&
         $('.intake-survey input[type=radio]:checked').length === 0 &&
