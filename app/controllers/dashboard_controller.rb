@@ -3,7 +3,7 @@ class DashboardController < ApplicationController
 
   def index
     if expert_signed_in?
-      redirect_to connected_path
+      redirect_to connected_path and return
     end
     unless current_user.survey_completed
       redirect_to survey_path(1)
