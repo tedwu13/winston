@@ -12,6 +12,11 @@
   </div>
   <hr>
   <div class="form-check form-radio">
+    <%= radio_button_tag @qna[:id], 'private', @qna[:answer] == 'both', class: 'form-check-input' %>
+    <%= label_tag(@qna[:id], 'Both', class: 'form-text') %>
+  </div>
+  <hr>
+  <div class="form-check form-radio">
     <%= radio_button_tag @qna[:id], 'no_preference', @qna[:answer] == 'no_preference', class: 'form-check-input' %>
     <%= label_tag(@qna[:id], 'No preference', class: 'form-text') %>
   </div>
