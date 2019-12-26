@@ -467,3 +467,9 @@ a {
   fill: $marine-blue;
   z-index: 1;
 }
+
+#intake-survey-2 {
+  .popover {
+    max-width: 100%;
+  }
+}

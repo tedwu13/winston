@@ -59,5 +59,7 @@ const ready = function() {
         $('.form-error').css('visibility', 'visible');
       }
     });
+
+  $('[data-toggle="popover"]').popover();
 };
 document.addEventListener("turbolinks:load", ready);

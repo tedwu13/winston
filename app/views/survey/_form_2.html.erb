@@ -1,6 +1,6 @@
 <%= form_tag("/answers", method: 'post', id: 'intake-survey-2', class: 'intake-survey') do %>
   <h4 class="survey-question"><%= @qna[:question_text] %></h4>
-  <p>Click here to view a map of US regions</p>
+  <a data-toggle="popover" data-html="true" data-content='<%= image_tag 'us_map.png', height: 500, width: 700 %>'>Click here to view a map of US regions</a>
   <hr>
   <div class="form-check form-radio">
     <%= check_box_tag 'northeast', true, @qna[:answer].include?('northeast'), class: 'form-check-input' %>
