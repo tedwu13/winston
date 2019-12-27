@@ -322,24 +322,12 @@ a {
     font-weight: 300;
     color: $dark-gray;
 
-    @media (min-width: 870px) {
-      min-height: 375px;
-    }
-
-    @media (min-width: 1050px) {
-      min-height: 280px;
-    }
-
-    @media (min-width: 1200px) {
-      min-height: 250px;
-    }
-
-    @media (min-width: 1350px) {
-      min-height: 220px;
+    @media (min-width: 1301px) {
+      min-height: 240px;
     }
 
     @media (min-width: 1500px) {
-      min-height: 200px;
+      min-height: 225px;
     }
 
     @media (min-width: 1640px) {
@@ -506,11 +494,24 @@ a {
   }
 }
 
-.home-page-face {
-  text-align: center;
+.inline {
+  display: inline-block;
+  *display: inline; /* for older IE */
+  *zoom: 1; /* for older IE */
 
   img {
-    margin-top: 25px;
-    height: 150px;
+    margin-top: -40px;
+    margin-right: 5px;
+    height: 50px;
+  }
+}
+
+.student-testimonial.col-sm-3 {
+  @media (min-width: 768px) and (max-width: 1300px) {
+    width: 50% !important;
+  }
+
+  .fa-stack {
+    width: auto !important;
   }
 }
