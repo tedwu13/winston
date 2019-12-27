@@ -321,6 +321,30 @@ a {
     font-size: 18px;
     font-weight: 300;
     color: $dark-gray;
+
+    @media (min-width: 870px) {
+      min-height: 375px;
+    }
+
+    @media (min-width: 1050px) {
+      min-height: 280px;
+    }
+
+    @media (min-width: 1200px) {
+      min-height: 250px;
+    }
+
+    @media (min-width: 1350px) {
+      min-height: 220px;
+    }
+
+    @media (min-width: 1500px) {
+      min-height: 200px;
+    }
+
+    @media (min-width: 1640px) {
+      min-height: 180px;
+    }
   }
 
   .student-name {
@@ -479,5 +503,14 @@ a {
     @media (min-width: 750px) {
       width: 700px;
     }
+  }
+}
+
+.home-page-face {
+  text-align: center;
+
+  img {
+    margin-top: 25px;
+    width: 150px;
   }
 }
