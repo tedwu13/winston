@@ -274,7 +274,8 @@ a {
 //FLEXIBLE OFFERINGS
 
 .flexible-offerings {
-  background-image: asset-url('flexible_offerings_image.jpeg');
+  background-image: asset-url('flexible_offerings_image.png');
+  background-size: cover;
   padding-top: 5em;
   padding-bottom: 5em;
   min-height: 546px;
@@ -469,7 +470,14 @@ a {
 }
 
 #intake-survey-2 {
-  .popover {
-    max-width: 100%;
+  .modal-dialog {
+    display: table
+  }
+
+  .modal-body > img {
+    width: 85vw;
+    @media (min-width: 750px) {
+      width: 700px;
+    }
   }
 }
