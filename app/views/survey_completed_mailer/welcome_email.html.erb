@@ -47,17 +47,17 @@
       margin-bottom: 1em;
       margin-top: 2em;
     }
-      .description {
-        width: 200px;
-      }
+    .description {
+      width: 200px;
+    }
   </style>
 </head>
 <body>
   <div class="logo">
-    <%= image_tag(attachments['winston_logo.png'].url, :style => "display: inline-block") %>
+    <%= image_tag 'logo.png', style: "display: inline-block" %>
   </div>
   <div class="email-background">
-    <%= image_tag(attachments['email_background.png'].url, :style => "width: 100%; height: 280px;") %>
+    <%= image_tag 'email_background.jpg', style: "width: 100%; height: 280px;" %>
     <div class="email-text">
       <h1 class="welcome-text">Welcome <%= @user.first_name %>!</h1>
       <p>Thanks for trusting Winston with guiding you through your journey to higher education--you're in good hands!</p>
@@ -69,23 +69,23 @@
       </p>
       <div class="img-container">
         <div>
-          <%= image_tag(attachments['felisha.png'].url) %>
+          <%= image_tag 'felisha.png' %>
           <p><b>Felisha Li</b></p>
-          Cornell University<br/><br/>
+          Cornell University<br/><br/><br/>
           <div class="description">
             Felisha is currently attending Cornell University, studying Biology, Neurobiology, and Behavior. When not in the lab doing research, she's been highly involved and impactful during her time on campus, serving as an official peer counselor for Cornell students, working in the Asian American resource center, and planning campus wide social and cultural events for the Chinese Student Association.
           </div>
         </div>
         <div>
-          <%= image_tag(attachments['ted.png'].url) %>
+          <%= image_tag 'ted.png' %>
           <p><b>Ted Wu</b></p>
-          Northwestern University<br/><br/>
+          Northwestern University<br/><br/><br/>
           <div class="description">
             Ted is a recent graduate of Northwestern University and has worked at two startups already, one of which was recently acquired by Airbnb. At Northwestern, Ted was active in organizations all over campus, including the Northwestern Wildcat Welcome, Alpha Kappa Psi, and Camp Kesem, a non profit organization dedicated to helping kids who's parents have cancer.
           </div>
         </div>
         <div>
-          <%= image_tag(attachments['yash.png'].url) %>
+          <%= image_tag 'yash.png' %>
           <p><b>Yash Gupta</b></p>
           University of Southern<br/>California<br/><br/>
           <div class="description">

@@ -88,4 +88,5 @@ Rails.application.configure do
     :user_name => "postmaster@mail.askwinston.org",
     :password => Rails.application.secrets.mailgun_password,
   }
+  config.action_mailer.asset_host = "https://askwinston.org"
 end
