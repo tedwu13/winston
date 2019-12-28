@@ -10,10 +10,11 @@
     }
     .img-container > div {
       display: inline-block;
-      margin-right: 25px;
+      margin-right: 15px;
+      vertical-align: top;
     }
     .img-container > div > img {
-      max-width: 180px;
+      max-height: 180px;
     }
     .email-background {
       background: white;
@@ -46,6 +47,9 @@
       margin-bottom: 1em;
       margin-top: 2em;
     }
+      .description {
+        width: 200px;
+      }
   </style>
 </head>
 <body>
@@ -65,19 +69,28 @@
       </p>
       <div class="img-container">
         <div>
-          <%= image_tag(attachments['joyce.png'].url) %>
-          <p><b>Joyce Lin</b></p>
-          Johns Hopkins University<br/><br/>
+          <%= image_tag(attachments['felisha.png'].url) %>
+          <p><b>Felisha Li</b></p>
+          Cornell University<br/><br/>
+          <div class="description">
+            Felisha is currently attending Cornell University, studying Biology, Neurobiology, and Behavior. When not in the lab doing research, she's been highly involved and impactful during her time on campus, serving as an official peer counselor for Cornell students, working in the Asian American resource center, and planning campus wide social and cultural events for the Chinese Student Association.
+          </div>
         </div>
         <div>
-          <%= image_tag(attachments['nel.png'].url) %>
-          <p><b>Neil Chaudhary</b></p>
-          Stanford University<br/><br/>
+          <%= image_tag(attachments['ted.png'].url) %>
+          <p><b>Ted Wu</b></p>
+          Northwestern University<br/><br/>
+          <div class="description">
+            Ted is a recent graduate of Northwestern University and has worked at two startups already, one of which was recently acquired by Airbnb. At Northwestern, Ted was active in organizations all over campus, including the Northwestern Wildcat Welcome, Alpha Kappa Psi, and Camp Kesem, a non profit organization dedicated to helping kids who's parents have cancer.
+          </div>
         </div>
         <div>
-          <%= image_tag(attachments['vanessa.png'].url) %>
-          <p><b>Vannessa Chiu</b></p>
-          University of Southern<br/>California
+          <%= image_tag(attachments['yash.png'].url) %>
+          <p><b>Yash Gupta</b></p>
+          University of Southern<br/>California<br/><br/>
+          <div class="description">
+            Yash recently graded magna cum laude from USC and is now working in strategy consulting at BCG. While at USC, he served as the head of multiple campus organizations, including as the president of the Marshall Business Student Government, and founded his own nonprofit called Sight Learning focused on providing glasses for the needy.
+          </div>
         </div>
       </div>
 
